@@ -1,0 +1,1035 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - image_processing
+  - citra
+  - piksel
+  - filter
+  - border
+  - kernel
+  - konvolusi
+  - step_konvolusi
+  - hasil_konvolusi
+  - fungsi_konvolusi
+  - rumus_konvolusi
+  - ocr
+  - pembentukan_citra
+  - citra_diskrit
+  - citra_kontinu
+  - data_digital
+  - data_analog
+  - digitalisasi_citra
+  - sampling
+  - kuantisasi
+  - resolusi
+  - representasi
+  - bitmap
+  - grafik
+  - level_titik
+  - grayscaling
+  - thresholding
+  - negatif
+  - clip
+  - brightening
+  - kontras
+  - peregangan
+  - translasi
+  - rotasi
+  - scaling
+  - flip
+  - lokal
+  - global
+  - aritmatika
+  - penjumlahan
+  - pengurangan
+  - perkalian
+  - pembagian
+  - boolean
+  - histogram
+  - buat_histogram
+  - perataan_histogram
+  - spek_histogram
+  - fourrier
+  - fourrier_diskrit
+  - walsh
+  - hadamard
+  - wavelet
+  - wavelet_diskrit
+  - morfologi
+  - dilasi
+  - erosi
+  - opening
+  - closing
+  - se
+  - hitmiss
+  - dilasi_gray
+  - erosi_gray
+  - kontur
+  - boundary
+  - region
+  - connected
+  - thinning
+  - thickening
+  - skeleton
+  - pruning
+  - step_canny
+  - reduksi_noise
+  - finding_gradient
+  - suppression
+  - hysterisis_tresh
+  - chain
+  - perimeter
+  - area
+  - faktor_bentuk
+  - template
+  - mean_template
+  - std_template
+  - normalisasi_template
+  - cross_template
+  - hough
+  - chough
+  - smoothing
+  - mean
+  - median
+  - gaus
+  - low_pass
+  - high_pass
+  - sharpening
+  - single_thresh
+  - otsu_thresh
+  - multi_thresh
+  - pengambangan
+  - hog
+  - deteksi_tepi
+  - tepi
+  - diff_grad
+  - diff_center
+  - sobel
+  - prewitt
+  - robert
+  - laplacian
+  - log
+  - kompas
+  - dasar_warna
+  - atribut_warna
+  - rgb
+  - cmy
+  - hs
+  - yuv
+  - ycbcr
+  - full_color
+  - point
+  - balancing
+  - color_smooth
+  - color_sharp
+
+responses:
+  utter_greet:
+  - text: "Oh, Halo! Ada yang bisa aku bantu?"
+
+  utter_goodbye:
+  - text: "Oke, kalau gitu aku tutup percakapannya ya, bye! Jangan bosan ngobrol sama aku ya!"
+
+  utter_pcd:
+  - text: "Seringkali citra mengalami penurunan mutu (degradasi), misalnya mengandung (noise), warnanya terlalu kontras, kurang tajam, kabur (blurring), dan sebagainya."
+  utter_pcd1:
+  - text: "Citra semacam ini menjadi lebih sulit diinterpretasi sehingga citra tersebut perlu dimanipulasi menjadi citra lain yang kualitasnya lebih baik. Nah, bidang studi yang menyangkut hal ini adalah pengolahan citra (image processing)."
+    image: "https://imgur.com/Ar8r8zQ.jpg"
+
+  utter_citra:
+  - text: "Citra adalah gambar pada bidang dwimatra dua dimensi. Tetapi jika ditinjau dari sudut pandang matematis, citra merupakan fungsi menerus (continue) dari intensitas cahaya pada bidang dwimatra. Menurut (Gonzalez, 2001), citra digital adalah array 2 dimensi dimana (x,y) merupakan koordinat spasial dan amplitude (f) disebut intensitas atau tingkat keabuan dari elemen gambar pada setiap pasangan koordinat (x,y)"
+
+  utter_piksel:
+  - text: "Piksel adalah unsur gambar atau representasi sebuah titik terkecil dalam sebuah gambar grafis yang dihitung per inci."
+  utter_piksel1:
+  - text: "Oh iya! piksel itu sendiri berasal dari akronim bahasa Inggris loh 'Picture Element' yang disingkat menjadi Pixel."
+
+  utter_filter:
+  - text: "Filter itu salah satu operasi yang paling penting dalam meningkatkan kualitas citra loh!"
+  utter_filter1:
+  - text: "Komputasi untuk suatu pixel pada citra keluaran melibatkan pixelpixel tetangga pada citra masukannya, maka dari itu Filter bisa dibilang komputasi level lokal"
+
+  utter_border:
+  - text: "Bisa kamu lihat di hasil konvolusi, bagian pinggir (border) matriks pixel citra baru tidak memiliki nilai" 
+    image: "https://i.imgur.com/T5GkGIL.jpg"
+  utter_border1:
+  - text: "Ada 3 alternatif cara yang dapat dilakukan:"
+  utter_border2:
+  - text: "1. Pixel-pixel pinggir diabaikan, tidak di-konvolusi. Solusi ini banyak dipakai, maka pixel-pixel pinggir nilainya tetap sama seperti citra asal."
+    image: "https://i.imgur.com/5xA1RAu.jpg"
+  utter_border3:
+  - text: "2. Duplikasi elemen citra, misalnya elemen kolom pertama disalin ke kolom M+1, begitu juga sebaliknya, lalu konvolusi dapat dilakukan terhadap pixel-pixel pinggir tersebut."
+  utter_border4:
+  - text: "3. Elemen yang ditandai dengan “?” diasumsikan bernilai 0 atau konstanta yang lain, sehingga konvolusi pixel-pixel pinggir dapat dilakukan"
+
+  utter_kernel:
+  - text: "Kernel konvolusi dinyatakan dalam bentuk matriks (umumnya 3 x 3, namun ada juga yang berukuran 2 x 2 atau 2 x 1 atau 1 x2)."
+    image: "https://i.imgur.com/CFCH5W3.jpg"
+  utter_kernel1:
+  - text: "Ukuran matriks ini biasanya lebih kecil dari ukuran citra. Hasil konvolusi sangat bergantung dari nilai koefisen kernel filter"
+
+  utter_konvolusi:
+  - text: "Konvolusi (convolution) adalah sebuah proses dimana citra dimanipulasi dengan menggunakan eksternal mask / subwindows untuk menghasilkan citra yang baru."
+
+  utter_hasil:
+  - text: "Ini contoh hasil konvolusi"
+    image: "https://i.imgur.com/0AVRf3f.jpg"
+
+  utter_fungsi:
+  - text: "Konvolusi berguna pada proses pengolahan citra seperti menghilangkan Noise, pelembutan citra/ image smoothing, penajaman citra, special effect (sepia filter, emboss filter, dll), ekstraksi ciri (deteksi tepi)"
+
+  utter_rumus:
+  - text: "I'(u,v) = Nilai hasil konvolusi di koordinat u,v"
+  utter_rumus1:
+  - text: "(i,j) = koordinat koefisen kernel"
+  utter_rumus2:
+  - text: "I(u,v) = Nilai pixel dari citra sumber"
+  utter_rumus3:
+  - text: "H(i,j) = nilai kooefisen kernel di koordinat i,j"
+    image: "https://i.imgur.com/2JeMNeh.jpg"
+    
+
+  utter_step:
+  - text: "Operasi konvolusi dilakukan dengan menggeser kernel konvolusi pixel per pixelHasil konvolusi disimpan di koordinat (u, v) yang ditandai dengan titik origin dalam matriks yang baru"
+    image: "https://i.imgur.com/crqSzhv.jpg"
+  utter_step1:
+  - text: "I'(u,v) = (P1 * A) + (P2 * B) + (P3 *C) + (P4*D) + (P5 * E) + (P6 * F) + (P7 * G) + (P8 * H) + (P9 * I))"
+  utter_step2:
+  - text: "Konvolusi diawali dari koordinat pojok kiri atas, hasil konvolusi disimpan pada koordinat yang bersesuaian dengan titik origin kernel"
+  utter_step3:
+  - text: "Misalkan diketahui citra input dengan ukuran 5 x 5, dikonvolusikan dengan kernel berukuran 3 x 3"
+    image: "https://imgur.com/79xLXfF.jpg"
+  utter_step4:
+  - text: "Tempatkan kernel pada sudut kiri atas, kemudian hitung nilai pixel pada posisi (0, 0) dari citra input"
+    image: "https://i.imgur.com/HeyNiNB.jpg"
+  utter_step5:
+  - text: "I'(1,1) = (4 * 0) + (4*-1)+(3*0)+(6*-1)+(6*4) + (5*-1)+(5*0)+(6*-1)+(6*0) = 3"
+    image: "https://imgur.com/aCZSn16.jpg"
+  utter_step6:
+  - text: "Geser kernel satu pixel ke kanan, kemudian hitung nilai pixel pada posisi (0,1) dari citra input:"
+  utter_step7:
+  - text: "I'(1,2) = (4 * 0) + (3*-1)+(5*0)+(6*-1)+(5*4) + (5*-1)+(6*0)+(6*-1)+(6*0) = 0"
+    image: "https://imgur.com/8MiQWHg.jpg"
+  utter_step8:
+  - text: "Geser kernel satu pixel ke kanan, kemudian hitung nilai pixel pada posisi (0,2) dari citra input:"
+  utter_step9:
+  - text: "I'(1,3) = (3 * 0) + (5*-1)+(4*0)+(5*-1)+(5*4) + (2*-1)+(6*0)+(6*-1)+(2*0) = 2"
+    image: "https://i.imgur.com/H4RDTlR.jpg"
+  utter_step10:
+  - text: "Selanjutnya, geser kernel satu pixel ke bawah, lalu mulai lagi melakukan konvolusi dari sisi kiri citra. Setiap kali konvolusi, geser kernel satu pixel ke kanan:"
+  utter_step11:
+  - text: "I'(2,1) = (6 * 0) + (6*-1)+(5*0)+(5*-1)+(6*4) + (6*-1)+(6*0)+(7*-1)+(5*0) = 0"
+    image: "https://imgur.com/UPJq6wl.jpg"
+  utter_step12:
+  - text: "proses selanjutnya dilakukan seperti tahap sebelumnya"
+  utter_step13:
+  - text: "I'(2,2) = (6 * 0) + (5*-1)+(5*0)+(6*-1)+(6*4) + (6*-1)+(7*0)+(5*-1)+(5*0) = 2"
+    image: "https://i.imgur.com/9yEXG1K.jpg"
+  utter_step14:
+  - text: "Geser kernel satu pixel ke kanan, kemudian hitung nilai pixel pada posisi (1,2) dari citra input, dan disimpan di koordinat (2,3) di matriks citra baru:"
+  utter_step15:
+  - text: "I'(2,3) = (5 * 0) + (5*-1)+(2*0)+(6*-1)+(6*4) + (2*-1)+(5*0)+(5*-1)+(3*0) = 6"
+    image: "https://imgur.com/p4mtypK.jpg"
+  utter_step16:
+  - text: "Dengan cara yang sama seperti di atas, maka pixel-pixel pada baris ketiga dikonvolusi sehingga menghasilkan"
+  utter_step17:
+  - text: "I'(3,1) = (5 * 0) + (6*-1)+(6*0)+(6*-1)+(7*4) + (5*-1)+(3*0)+(5*-1)+(2*0) = 3"
+  utter_step18:
+  - text: "I'(3,2) = (6 * 0) + (6*-1)+(6*0)+(7*-1)+(5*4) + (5*-1)+(5*0)+(2*-1)+(4*0) = 0"
+  utter_step19:
+  - text: "I'(3,3) = (6 * 0) + (6*-1)+(2*0)+(5*-1)+(5*4) + (3*-1)+(2*0)+(4*-1)+(4*0) = 2"
+    image: "https://imgur.com/Xgv1hMI.jpg"
+  utter_step20:
+  - text: "Dengan catatan : jika hasil konvolusi menghasilkan nilai pixel negatif, maka nilai tersebut dijadikan 0, jika hasil konvolusi menghasilkan nilai pixel lebih besar dari nilai keabuan maksimum, maka nilai tersebut dijadikan ke nilai keabuan maksimum (operasi clipping)."
+  
+
+  utter_ocr:
+  - text: "Pengenalan Karakter Optik adalah sebuah perangkat lunak yang mengubah teks dalam format berkas citra atau gambar ke dalam format teks yang bisa dibaca dan disunting oleh aplikasi komputer"
+    image: "https://i.imgur.com/BHFqgFL.jpg"
+
+  utter_pembentukan_citra:
+  - text: "Pembentukan citra terdiri dari 2 macam loh, citra kontinu dan juga citra diskrit"
+
+  utter_citra_diskrit:
+  - text: "Citra diskrit dihasilkan melalui proses digitalisasi terhadap citra"
+  utter_citra_diskrit1:
+  - text: "Contohnya adalah Kamera digital dan scanner"
+
+  utter_citra_kontinu:
+  - text: "Citra kontinu dihasilkan dari sistem optik yang menerima sinyal analog"
+  utter_citra_kontinu1:
+  - text: "Contohnya adalah mata manusia dan kamera analog"
+
+  utter_data_digital:
+  - text: "Data digital direpresentasikan dalam komputer berbentuk kode seperti binner, decimal. Contoh data digital : WAV, MP3, RMI, BMP, JPG, GIF, TIF"
+
+  utter_data_analog:
+  - text: "Data analog tidak direpresentasikan dalam komputer, semua merupakan fakta, contoh : gelombang suara, gambar. Data analog tersimpan dalam pita kaset"
+
+  utter_digitalisasi_citra:
+  - text: "Digitalisasi spasial (x, y), sering disebut sebagai penerokan (sampling)"
+  utter_digitalisasi_citra1:
+  - text: "Digitalisasi intensitas f(x, y), sering disebut sebagai kuantisasi"
+
+  utter_sampling:
+  - text: "Citra kontinu diterok pada grid-grid yang berbentuk bujursangkar (kisi-kisi dalam arah horizontal dan vertikal)"
+    image: "https://i.imgur.com/qkuhWlC.jpg"
+
+  utter_resolusi:
+  - text: "Pembagian gambar menjadi ukuran tertentu menentukan resolusi (yaitu derajat rincian yang dapat dilihat) spasial yang diperoleh. Semakin tinggi resolusinya, yang berarti semakin kecil ukuran pixel (atau semakin banyak jumlah pixel-nya)"
+  utter_resolusi1:
+  - text: "Semakin halus gambar yang diperoleh karena informasi yang hilang akibat pengelompokan derajat keabuan pada penerokan semakin kecil"
+    image: "https://i.imgur.com/7mttRpK.jpg"
+
+  utter_kuantisasi:
+  - text: "Proses kuantisasi membagi skala keabuan (0, L) menjadi G buah level yang dinyatakan dengan suatu harga bilangan bulat (integer)"
+    image: "https://i.imgur.com/6BoMzA9.jpg"
+  utter_kuantisasi1:
+  - text: "Dimana, G = derajat keabuan dan m = bilangan bulat positif"
+    image: "https://i.imgur.com/JZizwam.jpg"
+
+  utter_representasi:
+  - text: "Representasi ctra digital terdapat 2 macam yaitu bitmap dan grafik"
+
+  utter_bitmap:
+  - text: "Gambar Bitmap dipresentasikan dalam bentuk matrik, atau dipetakan dengan menggunakan bilangan binner atau sistem bilangan lain, memiliki kelebihan untuk memanipulasi warna namun untuk merubah objek lebih sulit. Contoh: PSD, TIF, JPEG, GIF, BMP"
+    image: "https://i.imgur.com/x3gOhCg.jpg"
+
+  utter_grafik:
+  - text: "Gambar Grafik data tersimpan dalam bentuk vektor posisi, dimana yang tersimpan hanya informasi vektor posisinya dengan bentuk sebuah fungsi, lebih sulit dalam merubah warna tapi lebih mudah membentuk objek dengan cara merubah nilai. Contoh: AI, CDR, FH, EPS"
+    image: "https://i.imgur.com/HPEVStr.jpg"
+
+  utter_level_titik:
+  - text: "Operasi level titik terdiri dari pengaksesan pixel pada lokasi yang diberikan, memodifikasinya dengan operasi operasi lanjar (linear) atau nirlanjar (nonlinear), dan menempatkan nilai pixel baru pada lokasi yang bersesuaian di dalam citra yang baru"
+
+  utter_grayscaling:
+  - text: "Pada grayscaling mengubah citra berwarna RGB menjadi citra keabuan"
+  utter_grayscaling1:
+  - text: "greyscale = 0.333R + 0.333G + 0.333B"
+  utter_grayscaling2:
+  - text: "greyscale = 0.299R + 0.587G + 0.114B"
+  utter_grayscaling3:
+  - text: "Grayscale = (max(R,G,B)) + (min(R,G,B)) * 0.5"
+
+  utter_thresholding:
+  - text: "Pada thresholding, nilai intensitas pixel dipetakan ke salah satu dari dua nilai, a1 atau a2, berdasarkan nilai ambang (threshold) T"
+    image: "https://i.imgur.com/T67nEfy.jpg"
+  utter_thresholding1:
+  - text: "Contoh hasil thresholding adalah citra biner"
+    image: "https://i.imgur.com/ucyDAHU.jpg"
+    
+  utter_negatif:
+  - text: "Operasi negatif, yaitu mendapatkan citra negatif (negative image) meniru film negatif pada fotografi "
+  utter_negatif1:
+  - text: "Mengurangi nilai intensitas pixel dari nilai keabuan maksimum"
+  utter_negatif2:
+  - text: "Misalnya pada citra dengan 256 derajat keabuan (8 bit), citra negatif diperoleh dengan persamaan:"
+    image: "https://i.imgur.com/AgeADMs.jpg"
+  utter_negatif3:
+  - text: "Citra negatif"
+    image: "https://i.imgur.com/wLxsk06.jpg"
+
+  utter_clip:
+  - text: "Operasi Pemotongan (clipping) dilakukan jika nilai intensitas pixel hasil suatu operasi pengolahan citra terletak di bawah nilai intensitas minimum atau di atas nilai intensitas maksimum"
+    image: "https://i.imgur.com/R1nPxob.jpg"
+
+  utter_brightening:
+  - text: "Kecerahan/kecemerlangan gambar dapat diperbaiki dengan menambahkan (atau mengurangkan) sebuah konstanta kepada (atau dari) setiap pixel di dalam citra."
+  utter_brightening1:
+  - text: "Secara matematis operasi ini ditulis sebagai"
+    image: "https://i.imgur.com/r9PXAEx.jpg"
+  utter_brightening2:
+  - text: "Jika b positif, kecerahan citra bertambah, sebaliknya jika b negatif kecerahan citra berkurang"
+  utter_brightening3:
+  - text: "Akibat dari operasi ini, histogram citra mengalami pergeseran"
+  utter_brightening4:
+  - text: "Jika operasi pencerahan citra menghasilkan nilai di bawah nilai intensitas minimum atau di atas nilai intensitas maksimum, maka diperluka operasi clipping"
+    image: "https://i.imgur.com/IYbi3D7.jpg"
+
+  utter_kontras:
+  - text: "Kontras menyatakan sebaran terang (lightness) dan gelap (darkness) di dalam sebuah gambar"
+  utter_kontras1:
+  - text: "Kontras dibagi menjadi 3,yaitu: citra kontras-rendah (low contrast), citra kontras-bagus (good contrast atau normal contrast), dan citra kontras-tinggi (high contrast)"
+  utter_kontras2:
+  - text: "Citra kontras-rendah dicirikan dengan sebagian besar komposisi citranya adalah terang atau sebagian besar gelap. Dari histogramnya terlihat sebagian besar derajat keabuannya terkelompok (clustered) bersama atau hanya menempati sebagian kecil dari rentang nilai-nilai keabuan yang mungkin. "
+    image: "https://i.imgur.com/PGl3Asu.jpg"
+  utter_kontras3:
+  - text: "Citra kontras-bagus memperlihatkan jangkauan nilai keabuan yang lebar tanpa ada suatu nilai keabuan yang mendominasi. Histogram citranya memperlihatkan sebaran nilai keabuan yang relatif seragam."
+    image: "https://i.imgur.com/o86prcQ.jpg"
+  utter_kontras4:
+  - text: "Citra kontras-tinggi, seperti halnya citra kontras bagus, memiliki jangkauan nilai keabuan yang lebar, tetapi terdapat area yang lebar yang didominasi oleh warna gelap dan area yang lebar yang didominasi oleh  warna terang. Pada histogramnya terlihat dua puncak, satu pada  area nilai keabuan yang rendah dan satu lagi pada area nilai keabuan yang tinggi."
+    image: "https://i.imgur.com/1LsyNDe.jpg"
+
+  utter_peregangan:
+  - text: "Citra dengan kontras-rendah dapat diperbaiki kualitasnya dengan operasi peregangan kontras. Melalui operasi ini, nilai-nilai keabuan pixel akan merentang dari 0 sampai 255 (pada citra 8-bit), dengan kata lain seluruh nilai keabuan pixel terpakai secara merata."
+  utter_peregangan1:
+  - text: "Rumus Peregangan kontras"
+    image: "https://i.imgur.com/JiM7yrd.jpg"
+  utter_peregangan2:
+  - text: "r: nilai keabuan dalam citra semula"
+  utter_peregangan3:
+  - text: "s: adalah nilai keabuan yang baru"
+  utter_peregangan4:
+  - text: "rmin: nilai keabuan terendah dari kelompok pixel"
+  utter_peregangan5:
+  - text: "rmax: adalah nilai keabuan tertinggi dari kelompok pixel"
+
+  utter_translasi:
+  - text: "Posisi pixel diubah ke posisi yang baru, sedangkan intensitasnya tidak berubah. Contoh operasi titik berdasarkan geometri misalnya pergeseran (translasi)"
+  utter_translasi1:
+  - text: "Rumus translasi citra:"
+    image: "https://i.imgur.com/FTm2oTr.jpg"
+  utter_translasi2:
+  - text: "m adalah besar pergeseran dalam arah x"
+  utter_translasi3:
+  - text: "n adalah besar pergeseran dalam arah y"
+  utter_translasi4:
+  - text: "B[x],[y] : citra hasil translasi"
+  utter_translasi5:
+  - text: "A[x],[y] : citra semula"
+  utter_translasi6:
+  - text: "contoh translasi dengan m=30, n=25"
+    image: "https://i.imgur.com/wMN1dNy.jpg"
+
+  utter_rotasi:
+  - text: "Posisi pixel diubah ke posisi yang baru, sedangkan intensitasnya tidak berubah. Contoh operasi titik berdasarkan geometri misalnya pemutaran (rotasi)"
+  utter_rotasi1:
+  - text: "Rumus translasi citra:"
+    image: "https://i.imgur.com/z8fJEBc.jpg"
+  utter_rotasi2:
+  - text: "contoh rotasi citra Lena sejauh 90° berlawanan arah jarum jam"
+    image: "https://i.imgur.com/09KDMCD.jpg"
+
+  utter_scaling:
+  - text: "Posisi pixel diubah ke posisi yang baru, sedangkan intensitasnya tidak berubah. Contoh operasi titik berdasarkan geometri misalnya penskalaan (dilatasi). Pengubahan ukuran citra (membesar/zoom in atau mengecil/zoom out)"
+  utter_scaling1:
+  - text: "Rumus translasi citra:"
+    image: "https://i.imgur.com/7ts9IoZ.jpg"
+  utter_scaling2:
+  - text: "sx dan sy adalah faktor skala masing masing dalam arah x dan arah y"
+  utter_scaling3:
+  - text: "Memperbesar citra dengan faktor 2 (Sx = Sy = 2) diimplementasikan dengan menyalin setiap piksel sebanyak 4 kali. Misal, citra 2x2 pikselakan menjadi 4x4 piksel"
+  utter_scaling4:
+  - text: "Memperkecil citra dengan faktor skala = 1/2 (Sx = Sy = 0.5) dilakukan dengan mengambil rata - rata dari 4 piksel yang bertetangga menjadi 1 piksel"
+    image: "https://i.imgur.com/CKaWMoE.jpg"
+  utter_scaling5:
+  - text: "Citra kota San Fransisco (ukuran normal), (b) citra kota San Fransisco setelah diperbesar 2 kali (sx = sy = 2):"
+    image: "https://i.imgur.com/hiYH8IN.jpg"
+
+  utter_flip:
+  - text: "Flipping adalah operasi geometri yang sama dengan pencerminan (image reflection)."
+  utter_flip1:
+  - text: "Flipping horizontal : pencerminan pada sumbu-Y (cartesian) "
+    image: "https://i.imgur.com/TfeHFje.jpg"
+  utter_flip2:
+  - text: "Flipping vertikal : pencerminan pada sumbu-X (cartesian) "
+    image: "https://i.imgur.com/FYrVIAB.jpg"
+  utter_flip3:
+  - text: "Pencerminan pada titik asal (cartesian)"
+    image: "https://i.imgur.com/9Oqeo1F.jpg"
+  utter_flip4:
+  - text: "Pencerminan pada garis x"
+    image: "https://i.imgur.com/axUllBa.jpg"
+  utter_flip5:
+  - text: "Hasil flipping citra"
+    image: "https://i.imgur.com/cIjePrA.jpg"
+
+  utter_lokal:
+  - text: "Operasi beraras lokal adalah operasi konvolusi untuk mendeteksi tepi (edge detection) dan pelembutan citra (image smoothing)."
+    image: "https://i.imgur.com/0SC7lke.jpg"
+
+  utter_global:
+  - text: "Operasi pada aras global menghasilkan citra keluaran yang intensitas suatu pixel bergantung pada intensitas keseluruhan pixel. Contoh operasi beraras global adalah operasi penyetaraan histogram untuk meningkatkan kualitas citra"
+    image: "https://i.imgur.com/4N9MCxu.jpg"
+
+  utter_aritmatika:
+  - text: "Pada operasi aritmatika terdapat penjumlahan, pengurangan, pembagian dan perkalian citra"
+
+  utter_penjumlahan:
+  - text: "Operasi penjumlahan citra dapat digunakan untuk mengurangi pengaruh derau (noise) di dalam data, dengan cara merata-ratakan derajat keabuan setiap pixel dari citra yang sama yang diambil berkali-kali."
+    image: "https://i.imgur.com/1t7zu4H.jpg"
+  utter_penjumlahan1:
+  - text: "Rumus penjumlahan citra:"
+    image: "https://i.imgur.com/VSkwr70.jpg"
+
+  utter_pengurangan:
+  - text: "Pengurangan citra juga dapat digunakan untuk mendeteksi perubahan yang terjadi selama selang waktu tertentu bila dua buah citra yang diambil adalah citra dari adegan yang sama. Teknik semacam ini dipakai pada moving images"
+    image: "https://i.imgur.com/IIbhLUO.jpg"
+  utter_pengurangan1:
+  - text: "Rumus pengurangan citra:"
+    image: "https://i.imgur.com/qe54oid.jpg"
+
+  utter_perkalian:
+  - text: "Perkalian citra memiliki hasil operasi mungkin bernilai riil, karena itu semua nilai dibulatkan ke nilai bulat terdekat, nilai maksimum adalah 255"
+    image: "https://i.imgur.com/a0GU4fd.jpg"
+  utter_perkalian1:
+  - text: "Rumus perkalian citra:"
+    image: "https://i.imgur.com/ilJYwgs.jpg"
+  utter_perkalian2:
+  - text: "Matriks perkalian citra:"
+    image: "https://i.imgur.com/HVbUFha.jpg"
+
+  utter_pembagian:
+  - text: "Operasi pembagian citra menghasilkan suatu citra yang memperlihatkan letak perbedaan anatar kedua citra (seperti operai pengurangan)"
+    image: "https://i.imgur.com/frRzzaA.jpg"
+  utter_pembagian1:
+  - text: "Rumus pembagian citra:"
+    image: "https://i.imgur.com/Q66plEa.jpg"
+
+  utter_boolean:
+  - text: "Operasi Boolean mempunyai terapan yang penting pada pemrosesan morfologi pada citra biner. Pada citra biner, operasi not dapat digunakan untuk menentukan komplemen dari citra"
+    image: "https://i.imgur.com/yiby9PV.jpg"
+  utter_boolean1:
+  - text: "Hasil operasi boolean"
+    image: "https://i.imgur.com/LWb6QEC.jpg"
+  utter_boolean2:
+  - text: "contoh hasil C(X, Y) = NOT A(X, Y)"
+    image: "https://i.imgur.com/pIo4EOp.jpg"
+
+  utter_histogtram:
+  - text: "Histogram citra adalah grafik yang menggambarkan penyebaran nilai-nilai intensitas pixel dari suatu citra atau bagian tertentu di dalam citra. "
+  utter_histogtram1:
+  - text: "Dari sebuah histogram dapat diketahui frekuensi kemunculan nisbi (relative) dari intensitas pada citra tersebut."
+  utter_histogtram2:
+  - text: "Histogram juga dapat menunjukkan banyak hal tentang  kecerahan (brightness) dan kontas (contrast) dari sebuah gambar. "
+  utter_histogtram3:
+  - text: "Karena itu, histogram adalah alat bantu yang berharga dalam pekerjaan pengolahan citra baik secara kualitatif maupun kuantitatif."
+
+  utter_buat_histogram:
+  - text: "Misalkan  citra digital memiliki L derajat keabuan, yaitu dari nilai 0 sampai L – 1 (misalnya pada citra dengan kuantisasi derajat keabuan 8-bit, nilai derajat keabuan dari 0 sampai 255). Secara matematis histogram citra dihitung dengan rumus:"
+    image: "https://i.imgur.com/dxqzO1w.jpg"
+  utter_buat_histogram1:
+  - text: "Tabel"
+    image: "https://i.imgur.com/o82gWgM.jpg"
+
+
+  utter_perataan_histogram:
+  - text: "Tujuan dari perataan histogram adalah untuk memperoleh penyebaran histogram yang merata, sedemikian sehingga setiap derajat keabuan memiliki jumlah pixel yang relatif sama. Karena histogram menyatakan peluang pixel dengan derajat keabuan tertentu, maka rumus menghitung histogram ditulis kembali sebagai fungsi peluang"
+    image: "https://i.imgur.com/9Uylb8A.jpg"
+  utter_perataan_histogram1:
+  - text: "yang artinya, derajat keabuan (k) dinormalkan terhadap derajat keabuan terbesar (L – 1).  Nilai rk = 0 menyatakan hitam, dan rk = 1 menyatakan putih dalam skala keabuan yang didefinisikan"
+  utter_perataan_histogram2:
+  - text: "perataan histogram adalah mengubah derajat keabuan suatu pixel ( r) dengan derajat keabuan yang baru ( s) dengan suatu fungsi transformasi T, yang dalam hal ini "
+    image: "https://i.imgur.com/RMQ5MW9.jpg"
+  utter_perataan_histogram3:
+  - text: "Dalam bentuk diskrit, nilai-nilai s diperoleh dengan persamaan berikut:"
+    image: "https://i.imgur.com/tSjI9Xx.jpg"
+  utter_perataan_histogram4:
+  - text: "Hasil perataan histogram"
+    image: "https://i.imgur.com/SUWFK98.jpg"
+
+
+  utter_spek_histogram:
+  - text: "Metode spesifikasi histogram (histogram spesification) memberikan cara menghasilkan histogram yang ditentukan oleh pengguna. Cara pembentukan histogramnya memanfaatkan sifat pada perataan histogram. Bila fungsi transformasi pada perataan histogram menghasilkan histogram semula menjadi histogram yang seragam, maka fungsi balikannya (inverse) memetakan histogram yang seragam menjadi histogram semula."
+    image: "https://i.imgur.com/KQCfPOv.jpg"
+  utter_spek_histogram1:
+  - text: "citra yang berukuran 64 × 64 dengan jumlah derajat keabuan (L) = 8 dan jumlah seluruh pixel (n) = 64 × 64 = 4096. Tabel histogram citra semula dan tabel histogram yang diinginkan adalah sebagai berikut:"
+    image: "https://i.imgur.com/OYhoz2A.jpg"
+  utter_spek_histogram2:
+  - text: "Hasil spesifikasi histogram"
+    image: "https://i.imgur.com/i2QoJXM.jpg"
+
+  utter_fourrier:
+  - text: "Proses perubahan fungsi dari ranah ranah spasial ke ranah frekuensi dilakukan melalui Transformasi Fourier. Sedangkan perubahan fungsi dari ranah frekuensi ke ranah spasial dilakukan melalui Transformasi Fourier Balikan (invers)."
+    image: "https://i.imgur.com/ScVsAEG.jpg"
+  utter_fourrier1:
+  - text: "Transformasi Fourier digunakan untuk menganalisis frekuensi pada operasi seperti perekaman citra, perbaikan kualitas citra, restorasi citra, pengkodean, dan lain-lain."
+
+  utter_fourrier_diskrit:
+  - text: "Pada pengolahan sinyal dengan komputer digital, fungsi dinyatakan oleh himpunan berhingga nilai diskrit. Transformasi Fourier Diskrit (TFD) ditujukan bagi persoalan yang tidak menghasilkan solusi transformasi Fourier dalam bentuk fungsi malar (terus menerus)."
+    image: "https://i.imgur.com/aSwPIvL.jpg"
+  utter_fourrier_diskrit1:
+  - text: "Hasil transformasi fourrier diskrit"
+    image: "https://i.imgur.com/ilOQZHo.jpg"
+
+  utter_walsh:
+  - text: "Jika FT berdasarkan pada basis fungsi trigonometri (sin-cos), maka Tr. Walsh berdasarkan pada fungsi basis yang nilainya +1 dan -1. Kompleksitas algoritma Tr. Walsh juga dapat diefisienkan menjadi N log2 N"
+  utter_walsh1:
+  - text: "Dengan u=0,1,2,…,N-1 dan x=0,1,2,..,N-1 sedangkan nilai n mengikuti aturan: N = 2^n"
+    image: "https://i.imgur.com/QyDgTnx.jpg"
+
+  utter_hadamard:
+  - text: "Rumus transformasi hadamard"
+    image: "https://i.imgur.com/JHx3ZQT.jpg"
+  utter_hadamard1:
+  - text: "Fungsi kernel 1D"
+    image: "https://i.imgur.com/JPS3x3C.jpg"
+  utter_hadamard2:
+  - text: "Tabel kernel Tr.Hadamard 1 D untuk N=8"
+    image: "https://i.imgur.com/hf7HUkL.jpg"
+
+  utter_wavelet:
+  - text: "Wavelet adalah fungsi matematika yang memotongmotong data menjadi kumpulan-kumpulan frekuensi yang berbeda, sehingga masing masing komponen tersebut dapat dipelajari dengan menggunakan skala resolusi yang berbeda."
+  utter_wavelet1:
+  - text: "Transformasi wavelet menggunakan dua  komponen penting dalam melakukan transformasi yakni fungsi skala (scaling function) dan fungsi wavelet (wavelet function). " 
+  utter_wavelet2:
+  - text: "Fungsi skala (scaling function) disebut juga sebagai Lowpass Filter, sedangkan fungsi wavelet (wavelet function) disebut juga sebagai Highpass Filter. "
+  utter_wavelet3:
+  - text: "Kedua fungsi ini digunakan pada saat transformasi wavelet dan inverse transformasi wavelet. Kedua komponen diatas dapat disebut sebagai mother wavelet yang harus memenuhi kondisi :"
+    image: "https://i.imgur.com/pddR33A.jpg"
+
+  utter_wavelet_diskrit:
+  - text: "Transformasi wavelet diskrit secara umum merupakan dekomposisi citra pada frekuensi subband citra tersebut dimana komponennya dihasilkan dengan cara penurunan level dekomposisi."
+  utter_wavelet_diskrit1:
+  - text: "Implementasi transformasi wavelet diskrit dapat dilakukan dengan cara melewatkan sinyal frekuensi tinggi atau highpass filter dan frekuensi rendah atau lowpass filter."
+
+  utter_morfologi:
+  - text: "Morfologi adalah cara mendeskripsikan atau menganalisis bentuk dari objek digital"
+  utter_morfologi1:
+  - text: "Pada morfologi, citra dinyatakan sebagai himpunan koordinat diskrit. Himpunan yang berhubungan dengan point/pixel objek citra"
+  utter_morfologi2:
+  - text: "Pemrosesan citra secara morfologi biasanya dilakukan terhadap citra biner (hanya terdiri dari 0 dan 1), walaupun tidak menutup kemungkinan dilakukan terhadap citra dengan skala keabuan 0-255"
+  utter_morfologi3:
+  - text: "Teknik morfologi juga digunakan untuk pre atau post-processing"
+  utter_morfologi4:
+  - text: "Beberapa operasi morflogi yang dapat dilakukan adalah Dilasi, Erosi, Opening, Closing, Thinning, shrinking, pruning, thickening, skeletonizing,dll"
+
+  utter_se:
+  - text: "Operasi morfologi menggunakan dua buah yaitu citra (umumnya citra biner) dan suatu kernel."
+  utter_se1:
+  - text: "Kernel pada operasi morfologi disebut Structuring Elements (SE)"
+  utter_se2:
+  - text: "Structuring element dapat berukuran sembarang"
+  utter_se3:
+  - text: "Structuring element juga memiliki titik poros (disebut juga titik origin/titik asal/titik acuan)"
+  utter_se4:
+  - text: "Origin dari SE ditandai dengan tanda titik hitam. Jika tidak ada tanda titik hitam maka diasumsikan origin berada di pusat simetri. Karena origin tidak harus berada di pusat, tetapi juga bisa berada di pinggir strel"
+    image: "https://i.imgur.com/Dkx4FnC.jpg"
+
+  utter_dilasi:
+  - text: "Dilasi merupakan proses penggabungan titik-titik latar (0) menjadi bagian dari objek (1), berdasarkan  structuring element  S yang digunakan"
+  utter_dilasi1:
+  - text: "Dilasi berguna ketika diterapkan dalam obyek-obyek yang terputus dikarenakan hasil pengambilan citra yang terganggu oleh noise, kerusakan obyek fisik yang dijadikan citra digital, atau disebabkan resolusi yang jelek"
+  utter_dilasi2:
+  - text: "Rumus dilasi"
+    image: "https://i.imgur.com/g06oUre.jpg"
+  utter_dilasi3:
+  - text: "Hasil dilasi"
+    image: "https://i.imgur.com/57Y0lUz.jpg"
+
+  utter_erosi:
+  - text: "Erosi merupakan proses mengecilkan atau menipiskan obyek citra biner"
+  utter_erosi1:
+  - text: "Erosi merupakan proses penghapusan titik-titik objek (1) menjadi bagian dari latar (0), berdasarkan  structuring element  S  yang digunakan"
+  utter_erosi2:
+  - text: "Rumus erosi"
+    image: "https://i.imgur.com/NNFlBav.jpg"
+  utter_erosi3:
+  - text: "Hasil erosi"
+    image: "https://i.imgur.com/Sx6xc20.jpg"
+
+  utter_opening:
+  - text: "Opening adalah proses erosi yang diikuti dengan dilasi. "
+  utter_opening1:
+  - text: "Efek yang dihasilkan adalah menghilangnya objek-objek kecil dan kurus, memecah objek pada titik-titik yang kurus, dan secara umum men-smooth-kan batas dari objek besar tanpa mengubah area objek secara signifikan"
+  utter_opening2:
+  - text: "Cara opening"
+    image: "https://i.imgur.com/hUqDkm9.jpg"
+  utter_opening3:
+  - text: "Hasil opening"
+    image: "https://i.imgur.com/NGvoyzP.jpg"
+
+  utter_closing:
+  - text: "Closing adalah proses dilasi yang diikuti dengan erosi."
+  utter_closing1:
+  - text: "Efek yang dihasilkan adalah mengisi lubang kecil pada objek, menggabungkan objek-objek yang berdekatan, dan secara umum men-smooth-kan batas dari objek besar tanpa mengubah area objek secara signifikan"
+  utter_closing2:
+  - text: "Cara closing"
+    image: "https://i.imgur.com/Qd0HXAl.jpg"
+  utter_closing3:
+  - text: "Hasil closing"
+    image: "https://i.imgur.com/eL3ulCo.jpg"
+
+  utter_hitmiss:
+  - text: "Suatu structuring element S dapat direpresentasikan dalam bentuk (S1,S2) dimana S1 adalah kumpulan titik-titik objek (hitam) dan S2 adalah kumpulan titik-titik latar (putih)"
+    image: "https://i.imgur.com/R7EtDhF.jpg"
+  utter_hitmiss1:
+  - text: "Hit-and-misss transform A*S adalah kumpulan titik-titik dimana S1 menemukan match di A dan pada saat yang bersamaan S2 juga menemukan match di luar A"
+    image: "https://i.imgur.com/Geajlpa.jpg"
+  utter_hitmiss2:
+  - text: "Contoh hit or miss transform"
+    image: "https://i.imgur.com/Q1ecbUN.jpg"
+
+  utter_dilasi_gray:
+  - text: "Proses dilasi pada citra gyayscale akan menghasilkan citra yang lebih terang karena sebagian dari pixel yang memiliki intensitas keabuan yang rendah diubah menjadi tinggi"
+    image: "https://i.imgur.com/hvb4ljQ.jpg"
+
+  utter_erosi_gray:
+  - text: "Pada erosi citra grayscale menghasilkan citra keluaran yang lebih gelap. Proses ini memperkecil wilayah terang yang dikelilingi wilayah gelap dan memperbesar wilayah gelap yang dikelilingi wilayah terang"
+    image: "https://i.imgur.com/q14PR9z.jpg"
+
+  utter_kontur:
+  - text: "Rangkaian pixel-pixel tepi yang membentuk batas daerah (region boundary) disebut kontur (contour). Terdapat 2 kontur, yaitu kontur terbuka dan kontur tertutup"
+
+  utter_boundary:
+  - text: "Terdapat beberapa algoritma pengolahan citra yang menggunakan operasi morphologi, yaitu EKSTRAKSI BOUNDARY"
+    image: "https://i.imgur.com/SyKcAbq.jpg"
+  utter_boundary1:
+  - text: "Hasil ekstraksi boundary"
+    image: "https://i.imgur.com/rimW551.jpg"
+
+  utter_region:
+  - text: "Algoritma Region Filling dimulai dari satu titik p di dalam boundary, tujuannya adalah mengisi keseluruhan region dengan 1."
+  utter_region1:
+  - text: "Jika digunakan konvensi bahwa semua titik non-boundary dilabeli 0, maka kita memberi nilai 1 pada p untuk memulai."
+  utter_region2:
+  - text: "Prosedur berikut akan mengisi region dengan nilai 1 :"
+    image: "https://i.imgur.com/Hgj6ESe.jpg"
+  utter_region3:
+  - text: "dengan X0=p, dan B adalah “symmetric structuring element”. Algoritma berhenti pada iterasi ke k, jika Xk=Xk-1. Union Xk dan A adalah himpunan isi region dan boundary-nya"
+  utter_region4:
+  - text: "Hasil region filling"
+    image: "https://i.imgur.com/bM6SIfN.jpg"
+
+  utter_connected:
+  - text: "Jika p dan q adlah pixel pada suatu himpunan bagian citra S maka p adalah terhubung ke q dalam S bila terdapat jalur dalam S yang menghubungkan p ke q. Untuk setiap pixel p dalam S, sekumpulan pixel dalam S yang terhubung ke p disebut Connected Component dari S"
+  utter_connected1:
+  - text: "Misal Y menyatakan “connected component” yang berada dalam himpunan A dan diasumsikan bahwa titik p dari Y diketahui. Ekspresi iteratif berikut akan menghasilkan semua elemen Y:"
+    image: "https://i.imgur.com/K5jCEYr.jpg"
+  utter_connected2:
+  - text: "dengan X0=p, dan B adalah “structuring element” yang sesuai. Jika Xk=Xk-1, algoritme telah konvergen dan memberikan hasil Y=Xk"
+  utter_connected3:
+  - text: "Hasil Ekstraksi Connected"
+    image: "https://i.imgur.com/dQGWQ13.jpg"
+
+  utter_thinning:
+  - text: "Tujuan thinning me-remove piksel tertentu pada objek sehingga tebal objek tersebut menjadi hanya satu piksel. Thinning tidak boleh menghilangkan end-point, memutus koneksi yang ada dan mengakibatkan excessive erosi. lgortima Thinning :"
+    image: "https://i.imgur.com/8FI50XN.jpg"
+  utter_thinning1:
+  - text: "Hasil Thinning"
+    image: "https://i.imgur.com/wB8MdMl.jpg"
+
+  utter_thickening:
+  - text: "Thickening adalah operasi dual dari thinning dan didefinisikan dengan ekspresi berikut :"
+    image: "https://i.imgur.com/QBZUMHa.jpg"
+  utter_thickening1:
+  - text: "Hasil thickening"
+    image: "https://i.imgur.com/IsOP8Uw.jpg"
+
+  utter_skeleton:
+  - text: "Skeletonization adalah cara lain untuk mengurangi obyek citra biner menjadi himpunan kerangka tipis yang menahan informasi penting mengenai bentuk asli obyek"
+    image: "https://i.imgur.com/lPbru7M.jpg"
+  utter_skeleton1:
+  - text: "Hasil skeletonization"
+    image: https://i.imgur.com/nFEfurc.jpg""
+
+  utter_pruning:
+  - text: "Metode pruning adalah prosedur tambahan yang diperlukan oleh algoritma thinning dan skeletonizing, karena algoritma thinning dan skeletonizing seringkali menghasilkan komponen-komponen parasit yang harus dibersihkan dengan suatu proses lain."
+    image: "https://i.imgur.com/YQFVi3v.jpg"
+  utter_pruning1:
+  - text: "Hasil pruning"
+    image: "https://i.imgur.com/9ImfFy3.jpg"
+
+  utter_step_canny:
+  - text: "Terdapat 4 tahap pengerjaan canny edge detection yaitu Reduksi Noise menggunakan kernel Gauss, Finding Gradien, Non-Maximum Suppression dan Hysterisis Thresholding"
+
+  utter_reduksi_noise:
+  - text: "Pada reduksi noise, citra asli akan direduksi noise menggunakan Kernel Gaussian dengan standar deviasi 1.4"
+    image: "https://i.imgur.com/haX63oC.jpg"
+  utter_reduksi_noise1:
+  - text: "Hasil reduksi noise menggunkan gaussian kernel"
+    image: "https://i.imgur.com/prkXS59.jpg"
+
+  utter_finding_gradient:
+  - text: "Melakukan deteksi tepi dengan salah satu operator deteksi tepi, seperti sobel/robert/prewitt dengan melakukan pencarian secara horizontal (Gx) dan secara vertikal (Gy). Hasil tahapan finding gradient"
+    image: "https://i.imgur.com/ywN6M96.jpg"
+
+  utter_suppression:
+  - text: "Non-Maximum Suppression mengkorversikan tepian yang masih blurr pada gambar hasil magnitude gradien hingga menghasilkan tepian yang tajam"
+    image: "https://i.imgur.com/wA6oC9t.jpg"
+  utter_suppression1:
+  - text: "Algoritma Non Maximum Suppression"
+    image: "https://i.imgur.com/VKEZSVW.jpg"
+  utter_suppression2:
+  - text: "Hasil Non Maximum Suppression"
+    image: "https://i.imgur.com/YBdzPWR.jpg"
+
+  utter_hysterisis_tresh:
+  - text: "Sistem thresholding ganda dimana tepian dengan nilai yang lebih besar dari threshold atas ditandai sebagai titik kuat, tepian dengan nilai yang lebih kecil dari threshold bawah akan dihapus, dan tepian dengan nilai piksel antara threshold atas dengan threshold bawah akan ditandai sebagai tepian yang lemah."
+    image: "https://i.imgur.com/S9OllIf.jpg"
+  utter_hysterisis_tresh1:
+  - text: "Tepian yang kuat diintepretasikan sebagai tepian yang pasti dan dapat segera dimasukkan sebagai tepian pada gambar akhir"
+  utter_hysterisis_tresh2:
+  - text: "Tepi lemah termasuk jika dan hanya jika terhubung ke tepi yang kuat, dengan logika bahwa noise dan variasi warna tidak mungkin untuk menghasilkan tepi yang kuat (dengan penyesuaian yang tepat dari thresholding)."
+    image: "https://i.imgur.com/Olw1oW0.jpg"
+
+  utter_chain:
+  - text: "Pembentukan kode rantai dimulai dengan menentukan pixel pertama dari objek. Berdasarkan pixel tersebut kode rantai objek dibentuk dengan mengikuti aturan arah kode rantai. • Berdasarkan kode rantainya, analisis terhadap suatu objek dapat dilakukan dengan menghitung keliling, area dan faktor bentuknya"
+    image: "https://i.imgur.com/xFhcz3F.jpg"
+
+  utter_perimeter:
+  - text: "Perimeter menyatakan panjang dari kerangka yang dihasilkan. Berikut ini persamaan:"
+    image: "https://i.imgur.com/4ORUmYQ.jpg"
+
+  utter_area:
+  - text: "Perhitungan luas area berdasarkan kode rantai dinyatakan sebagai berikut:"
+    image: "https://i.imgur.com/Qgkz4Ra.jpg"
+  utter_area1:
+  - text: "Untuk kode rantai 077 076 455 453 012 334 201 luas areanya adalah:"
+    image: "https://i.imgur.com/43in69z.jpg"
+
+  utter_faktor_bentuk:
+  - text: "Faktor bentuk tidak menunjukkan kuantitas ukuran sehingga S memiliki sifat invarian terhadap skala, rotasi dan translasi. Faktor bentuk didefinisikan sebagai:"
+    image: "https://i.imgur.com/KeyqeCA.jpg"
+  utter_faktor_bentuk1:
+  - text: "Berikut ini adalah ekstraksi ciri perimeter, area dan faktor bentuk dari berbagai bentuk sederhana:"
+    image: "https://i.imgur.com/aLFozUf.jpg"
+
+  utter_template:
+  - text: "Template matching terdiri dari beberapa tahapan yaitu input piksel data uji dan piksel template, mencari mean data template dan uji, menentukan standar deviasi, menetukan nilai normalisasi, dan menghitung normalized cross corelation"
+
+  utter_mean_template:
+  - text: "Rumus mencari mean"
+    image: "https://i.imgur.com/VVgs10L.jpg"
+
+  utter_std_template:
+  - text: "Rumus mencari standar deviasi"
+    image: "https://i.imgur.com/8RE0bSq.jpg"
+
+  utter_normalisasi_template:
+  - text: "Rumus mencari normasilasi citra"
+    image: "https://i.imgur.com/wnDYOk1.jpg"
+
+  utter_cross_template:
+  - text: "Rumus mencari normalized cross correlation"
+    image: "https://i.imgur.com/Lykh4nx.jpg"
+
+  utter_hough:
+  - text: "Hough Transform adalah teknik transformasi citra yang dapat digunakan untuk mengisolasi atau dengan kata lain memperoleh fitur dari sebuah citra, teknik yang paling umum digunakan untuk mendeteksi objek yang berbentuk kurva seperti garis, lingkaran, elips dan parabola yang dapat mendeteksi sebuah tepian dengan celah pada batas fitur dan secara relatif tidak dipengaruhi oleh derau atau noise"
+    image: "https://i.imgur.com/KDQKqkJ.jpg"
+  utter_hough1:
+  - text: "Panjang kurva"
+    image: "https://i.imgur.com/gjQVNPy.jpg"
+
+  utter_chough:
+  - text: "Untuk mendeteksi lingkaran dilakukan pada parameter ruang 3D (x0,y0,r), dimana x0 dan y0 merupakan koordinat pusat lingkaran dan r adalah jari-jari lingkaran"
+    image: "https://i.imgur.com/Iegpqru.jpg"
+  utter_chough1:
+  - text: "Vektor parameter dan ilustrasi dalam kordinat"
+    image: "https://i.imgur.com/qY3vqbt.jpg"
+  utter_chough2:
+  - text: "Hasil transformasi hough mendeteksi lingkaran"
+    image: "https://i.imgur.com/H1EH3ho.jpg"
+
+  utter_smoothing:
+  - text: "Smooting atau pelembutan citra bertujuan untuk menekan gangguan (noise) pada citra. Gangguan tersebut biasanya muncul sebagai akibat dari hasil penerokan yang tidak bagus (sensor noise, photographic grain noise) atau akibat saluran transmisi (pada pengiriman data)"
+    image: "https://i.imgur.com/2hZFaHL.jpg"
+
+  utter_mean:
+  - text: "Operasi pelembutan dilakukan dengan mengganti intensitas suatu pixel dengan rata-rata dari nilai pixel tersebut dengan nilai pixelpixel tetangganya atau biasa disebut menggunakan mean filter"
+    image: "https://i.imgur.com/jGxlWwi.jpg"
+  utter_mean1:
+  - text: "Hasil mean filter"
+    image: "https://i.imgur.com/f2LVOxD.jpg"
+
+  utter_median:
+  - text: "Pada median filter setiap pergeseran dibuat jendela baru. Titik tengah dari jendela ini diubah dengan nilai median dari jendela tersebut"
+  utter_median1:
+  - text: "Hasil median filter"
+    image: "https://i.imgur.com/rdmB9P9.jpg"
+
+  utter_gaus:
+  - text: "Gaussian filter digunakan untk proses penghaslusan citra, pegaburan , menghilankan detail, menghilangakan noise. Fungsi gaussian 2D adalah"
+    image: "https://i.imgur.com/iwBcx4m.jpg"
+  utter_gaus1:
+  - text: "Kernel gaussian 2D"
+    image: "https://i.imgur.com/tS0VNvu.jpg"
+
+  utter_low_pass:
+  - text: "Penapis h(x,y) pada operasi pelembutan citra disebut juga penapis lolos-rendah (low-pass filter), karena penapis tersebut menekan komponen yang berfrekuensi tinggi (misalnya pixel gangguan, pixel tepi) dan meloloskan komponen yang berfrekuensi rendah"
+    image: "https://i.imgur.com/Ckq5IPr.jpg"
+
+  utter_high_pass:
+  - text: "Hasil high pass filter"
+    image: "https://i.imgur.com/ygUihyq.jpg"
+  utter_high_pass1:
+  - text: "Aturan high pass filter"
+    image: "https://i.imgur.com/RZ2BsDX.jpg"
+
+  utter_sharpening:
+  - text: "Operasi penajaman citra bertujuan memperjelas tepi pada objek di dalam citra atau menghilangkan bagian citra yang lembut. Karena penajaman citra lebih berpengaruh pada tepi (edge) objek, maka penajaman citra sering disebut juga penajaman tepi (edge sharpening) atau peningkatan kualitas tepi (edge enhancement)"
+    image: "https://i.imgur.com/l0N4jOV.jpg"
+
+  utter_single_thresh:
+  - text: "Pada single global threshold Untuk menentukan nilai T dapat dilakukan dengan membuat histogram. Nilai T ditentukan dengan mencari nilai yang memisahkan objek dan background"
+    image: "https://i.imgur.com/zbJmTlr.jpg"
+  utter_single_thresh1:
+  - text: "Contoh single global thresholding"
+    image: "https://i.imgur.com/KctMao1.jpg"
+
+  utter_otsu_thresh:
+  - text: "Pada otsu thresholding, Menghitung nilai T secara otomatis berdasarkan citra masukan. Metode Otsu melakukan analisis diskriminan yaitu menentukan suatu variabel yang dapat membedakan antara dua atau lebih kelompok yang muncul secara alami. Analisis diskriminan akan memaksimumkan variabel agar dapat memisahkan objek dengan latar belakang"
+    image: "https://i.imgur.com/0I3z83f.jpg"
+
+  utter_multi_thresh:
+  - text: "Thresholding multilevel digunakan untuk mengklasifikasikan suatu titik (x,y) sebagai bagian dari sebuah class objek. Titik (x,y) menjadi bagian dari suatu objek jika T1<f(x,y)≤T2, dan menjadi bagian dari objek yang lain jika f(x,y)>T2, dan menjadi bagian dari background jika f(x,y) ≤T1"
+    image: "https://i.imgur.com/w2V7LeK.jpg"
+
+  utter_pengambangan:
+  - text: "Nilai ambang lokal dapat dihitung menggunakan salah satu dari tiga cara berikut"
+    image: "https://i.imgur.com/yml7cgi.jpg"
+  utter_pengambangan1:
+  - text: "Dengan W menyatakan blok yang diproses. Nw adalah banyaknya piksel pada setiap blok W. C menyatakan suatu konstanta yang ditentukan secara bebas"
+    image: "https://i.imgur.com/bKn5iMf.jpg"
+
+  utter_hog:
+  - text: "HOG (HISTOGRAM OF GRADIENT) tidak hanya mendeteksi tetapi juga mampu memberikan arah tepi dengan mengekstraksi gradien dan orientasi dari tepi. Hasil akhir HOG HOG akan menghasilkan Histogram untuk masing-masing wilayah secara terpisah. istogram dibuat menggunakan gradien dan orientasi nilai piksel, oleh karena itu dinamai 'Histogram Gradien Berorientasi'"
+    image: "https://i.imgur.com/laldsnC.jpg"
+
+  utter_deteksi_tepi:
+  - text: "Terdapat beberapa teknik yang digunakan untuk mendeteksi tepi, antara lain Operator gradien pertama (differential gradient), Operator turunan kedua (Laplacian) dan Operator kompas (compass operator)"
+
+  utter_tepi:
+  - text: "Tepi (edge) adalah perubahan nilai intensitas derajat keabuan yang mendadak (besar) dalam jarak yang singkat. Ada tiga macam tepi yang terdapat di dalam citra digital yaitu Tepi curam, Tepi landai dan Tepi yang mengandung derau (noise)"
+
+  utter_diff_grad:
+  - text: "Perubahan intensitas yang besar dalam jarak yang singkat dipandang sebagai fungsi yang memiliki kemiringan yang besar"
+  utter_diff_grad1:
+  - text: "Kemiringan fungsi biasanya dilakukan dengan menghitung turunan pertama (gradient)"
+    image: "https://i.imgur.com/gw74s9H.jpg"
+  utter_diff_grad2:
+  - text: "Biasanya Dx = Dy =1 , sehingga persamaan turunan pertama menjadi:"
+    image: "https://i.imgur.com/INEUdgG.jpg"
+  utter_diff_grad3:
+  - text: "Hasil perhitungan gradien setiap pixel di dalam citra adalah sebagai berikut"
+    image: "https://i.imgur.com/tbWAXV8.jpg"
+  utter_diff_grad4:
+  - text: "Hasil differential gradient"
+    image: "https://i.imgur.com/fn3UUpv.jpg"
+
+  utter_diff_center:
+  - text: "Rumus operator gradien selisih terpusat (center difference)"
+    image: "https://i.imgur.com/OWPGufU.jpg"
+
+  utter_sobel:
+  - text: "Jika konstanta c=2, maka kernel Sx dan Sy adalah arah tepi diperoleh dari"
+    image: "https://i.imgur.com/xjlrbd2.jpg"
+  utter_sobel1:
+  - text: "Hasil operator sobel"
+    image: "https://i.imgur.com/PQQ1RNz.jpg"
+
+  utter_prewitt:
+  - text: "Persamaan gradien operator Prewitt sama dengan operator Sobel hanya konstanta c=1"
+    image: "https://i.imgur.com/NfGKtQt.jpg"
+
+  utter_robert:
+  - text: "Operator robert atau biasa disebut juga operator silang"
+    image: "https://i.imgur.com/8VkSWW6.jpg"
+
+  utter_laplacian:
+  - text: "Deteksi tepi turunan kedua dapat menghasilkan tepian citra yang lebih tipis. Salah satu operatornya adalah Operator Laplacian yang mendeteksi lokasi tepi lebih akurat khususnya pada tepi yang curam"
+    image: "https://i.imgur.com/9pdJOQG.jpg"
+  utter_laplacian1:
+  - text: "Pada tepi yang curam, turunan keduanya mempunyai persilangan nol (zero-crossing), yaitu titik di mana terdapat pergantian tanda nilai turunan kedua, sedangkan pada tepi yang landai tidak terdapat persilangan nol. Persilangan nol merupakan lokasi tepi yang akurat."
+    image: "https://i.imgur.com/8mRYeMJ.jpg"
+
+  utter_log:
+  - text: "Pada laplacian of gaussian mendeteksi tepi yang mengalami distorsi. Skema LoG"
+    image: "https://i.imgur.com/JYykcA6.jpg"
+  utter_log1:
+  - text: "LoG pada hasil Laplacian dengan bobot berlebih"
+    image: "https://i.imgur.com/VTplaKP.jpg"
+
+  utter_kompas:
+  - text: "Deteksi tepi operator kompas"
+    image: "https://i.imgur.com/jlCYiMu.jpg"
+
+  utter_dasar_warna:
+  - text: "Warna sinar yang direspon oleh mata adalah visible spectrum dengan panjang gelombang berkisar dari 400 (biru) sampai 700 nm (merah)"
+  utter_dasar_warna1:
+  - text: "Terdapat tiga warna pokok yaitu Red (R),Green (G), Blue(B) atau RGB"
+  utter_dasar_warna2:
+  - text: "Warna-warna yang diterima oleh mata manusia merupakan hasil kombinasi cahaya dengan panjang gelombang berbeda"
+  utter_dasar_warna3:
+  - text: "Kombinasi warna yang memberikan rentang warna yang paling lebar adalah red"
+
+  utter_atribut_warna:
+  - text: "Setiap warna memiliki 3 buah atribut, yaitu intensity (I), hue (H), dan saturation (S). Ketiga atribut warna (I, H, dan S) digambarkan dalam model IHS (ada juga yang menyebutnya model HSV, dengan V = Value = I)"
+    image: "https://i.imgur.com/jwbWdIS.jpg"
+
+  utter_rgb:
+  - text: "Jika masing-masing RGB memiliki graylevel 8-bit, maka dikatakan memiliki kedalaman 24-bit. Total jumlah warna yang dihasilkan adalah (2^8)^3 = 16.777.216 warna"
+    image: "https://i.imgur.com/e23n3lx.jpg"
+
+  utter_cmy:
+  - text: "Untuk menghasilkan nilai warna yang lebih baik, CMY diperbaiki dengan CMYK"
+  utter_cmy1:
+  - text: "CMYK ditujukan untuk menambahkan warna yang keempat, yaitu black"
+  utter_cmy2:
+  - text: "Disebut juga dengan “four- color printing” yang didapatkan dari CMY dan Black"
+    image: "https://i.imgur.com/Mcd8Yos.jpg"
+
+  utter_hs:
+  - text: "Ketika manusia memandang object, deskripsi yang diterima adalah hue, saturation, dan brightness"
+  utter_hs1:
+  - text: "Hue: atribut warna yang mendeskripsikan pure color (pure yellow, orange, atau red)"
+  utter_hs2:
+  - text: "Saturation: ukuran derajat dimana pure color dicerahkan"
+  utter_hs3:
+  - text: "Brightness: subjective deskriptor intensitas"
+    image: "https://i.imgur.com/jeiPJin.jpg"
+
+  utter_yuv:
+  - text: "Model YUV terdiri dari komponen luminance/brightness (Y) dan dua komponen konten warna / chrominance (U dan V)"
+    image: "https://i.imgur.com/7uZHv6t.jpg"
+  utter_yuv1:
+  - text: "Konversi dari RGB ke model YUV (Gonzales ,2002)"
+    image: "https://i.imgur.com/p7Qlt92.jpg"
+
+  utter_ycbcr:
+  - text: "YCbCr merupakan model warna hasil encoding non-linier sinyal RGB, biasanya digunakan studioTV Eropa dan kompresi citra."
+  utter_ycbcr1:
+  - text: "Komponen Y : luma (luminance), Komponen Cb dan Cr masing-masing merupakan bentuk subtractive dari B dan R pada model RGB."
+  utter_ycbcr2:
+  - text: "Konversi dari RGB ke modelYUV (Tarek M,2008)"
+    image: "https://i.imgur.com/BOnjG4o.jpg"
+  utter_ycbcr3:
+  - text: "Model Warna YCbCr"
+    image: "https://i.imgur.com/9ganFoF.jpg"
+
+  utter_full_color:
+  - text: "Untuk sebuah piksel dalam ruang citra berwarna dilakukan proses sebanyak sinyal warnanya"
+    image: "https://i.imgur.com/PH0sv4v.jpg"
+
+  utter_point:
+  - text: "Contoh color image point processing"
+    image: "https://i.imgur.com/fX7nOkd.jpg"
+
+  utter_balancing:
+  - text: "Contoh color balancing"
+    image: "https://i.imgur.com/GazjB5Q.jpg"
+
+  utter_color_smooth:
+  - text: "Diberikan Sxy merupakan notasi himpunan koordinat dari piksel ketetanggaan dengan pusat (x,y). Nilai rata-rata komponen RGB dalam ketetanggaan tersebut"
+    image: "https://i.imgur.com/uzQUchD.jpg"
+  utter_color_smooth1:
+  - text: "Hasil color image smoothing"
+    image: "https://i.imgur.com/P1uSjO3.jpg"
+
+  utter_color_sharp:
+  - text: "Menghitung fungsi Laplacian pada Color Image sama dengan menghitung fungsi Laplacian setiap komponen sinyal seperti pada graylevel. Pada model warna RGB, fungsi Laplacian vektor c :"
+    image: "https://i.imgur.com/7q1HUMV.jpg"
+  utter_color_sharp1:
+  - text: "Hasil color image sharpening"
+    image: "https://i.imgur.com/ULwDMKX.jpg"
+
+  utter_did_that_help:
+  - text: "Apakah sudah cukup membantu?"
+
+  utter_tanya:
+  - text: "Ada yang mau ditanyakan lagi?"
+
+  utter_noworries:
+  - text: "Sama-sama, jangan sungkan bertanya lagi ya!"
+
+  utter_tanya_lagi:
+  - text: "Apa yang mau kamu tanyakan lagi?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

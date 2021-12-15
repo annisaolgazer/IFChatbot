@@ -1,0 +1,2048 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - pagi
+    - siang
+    - sore
+    - malam
+    - hola
+    - selamat pagi
+    - selamat malam
+    - selamat siang
+    - selamat sore
+    - hoy
+    - hai
+    - hei
+    - slmt pagi
+    - slmt siang
+    - slmt sore
+    - slmt malam
+    - met pagi
+    - met siang
+    - met sore
+    - met malam
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - dah
+    - dadah
+    - sampai jumpa
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - iya
+    - ya
+    - betul
+    - benar
+    - bnr
+    - iye
+    - sangat membantu
+    - membantu
+    - sebentar
+    - ada
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - bukan
+    - engga
+    - tidak
+    - jangan
+    - ga
+    - g
+    - cukup
+    - tidak ada
+    - ckp
+    - nda
+    - gak
+    - enggak
+    - cukup sih
+    - belum
+
+- intent: thank
+  examples: |
+    - thankyou
+    - thanks
+    - makasih
+    - terimakasih
+    - thankyou so much
+    - terima kasih banyak
+    - makasih banyak
+    - thx
+    - hatur nuhun
+    - thx a lot
+    - oke terimakasih
+    - terima kasih
+    - makasih banyak
+    - thanks
+
+- intent: image_processing
+  examples: |
+    - pengolahan citra digital
+    - image processing
+    - Pengertian Pengolahan Citra Digital
+    - pcd
+    - apa itu pcd?
+    - apa itu pengolahan citra digital?
+    - Boleh tolong jelasin tentang pcd?
+    - Boleh tolong jelasin tentang pengolahan citra digital?
+    - jadi apa itu pcd?
+    - PCD itu apa ya?
+
+- intent: citra
+  examples: |
+    - Apa itu Citra
+    - Citra
+    - Penjelasan dari citra itu apa?
+    - Jelasin dong citra itu apa ya?
+    - Kalau citra itu apa?
+    - Boleh tolong jelasin tentang citra?
+    - jadi apa itu citra?
+    - citra itu apa ya?
+    - apa itu citra?
+    - pengertian citra
+    - oh kalau citra itu apa ya?
+    - jadi apa itu citra
+
+- intent: piksel
+  examples: |
+    - Apa itu piksel
+    - piksel
+    - Penjelasan dari piksel itu apa?
+    - Jelasin dong piksel itu apa ya?
+    - Kalau piksel itu apa?
+    - Boleh tolong jelasin tentang piksel?
+    - jadi apa itu piksel?
+    - piksel itu apa ya?
+    - apa itu piksel?
+    - pengertian piksel
+    - oh kalau piksel itu apa ya?
+    - jadi apa itu piksel
+
+- intent: filter
+  examples: |
+    - Apa itu filter
+    - filter
+    - Penjelasan dari filter itu apa?
+    - Jelasin dong filter itu apa ya?
+    - Kalau filter itu apa?
+    - Boleh tolong jelasin tentang filter?
+    - jadi apa itu filter?
+    - filter itu apa ya?
+    - apa itu filter?
+    - pengertian filter
+    - oh kalau filter itu apa ya?
+    - jadi apa itu filter
+
+- intent: border
+  examples: |
+    - Apa itu boder
+    - boder
+    - Penjelasan dari boder itu apa?
+    - Jelasin dong boder itu apa ya?
+    - Kalau boder itu apa?
+    - Boleh tolong jelasin tentang boder?
+    - jadi apa itu boder?
+    - boder itu apa ya?
+    - apa itu boder?
+    - pengertian boder
+    - oh kalau boder itu apa ya?
+    - jadi apa itu boder
+    - bagian sisi
+    - bagian pinggir
+    - bagian sisi kernel
+    - bagian pinggir kernel
+    - apakah bagian pinggir tidak dihitung?
+    - cara menghitung border yang di proses bagaimana?
+    - Bagian pinggir itu tidak dihitung?
+
+- intent: kernel
+  examples: |
+    - Apa itu kernel
+    - kernel
+    - Penjelasan dari kernel itu apa?
+    - Jelasin dong kernel itu apa ya?
+    - Kalau kernel itu apa?
+    - Boleh tolong jelasin tentang kernel?
+    - jadi apa itu kernel?
+    - kernel itu apa ya?
+    - apa itu kernel?
+    - pengertian kernel
+    - oh kalau kernel itu apa ya?
+    - jadi apa itu kernel
+
+- intent: konvolusi
+  examples: |
+    - Apa itu konvolusi
+    - konvolusi
+    - Penjelasan dari konvolusi itu apa?
+    - Jelasin dong konvolusi itu apa ya?
+    - Kalau konvolusi itu apa?
+    - Boleh tolong jelasin tentang konvolusi?
+    - jadi apa itu konvolusi?
+    - konvolusi itu apa ya?
+    - apa itu konvolusi?
+    - pengertian konvolusi
+    - oh kalau konvolusi itu apa ya?
+    - jadi apa itu konvolusi
+    - convolution
+
+- intent: step_konvolusi
+  examples: |
+    - boleh tolong jelaskan langkah langkah konvolusi ga?
+    - langkah langkah
+    - langkah
+    - tahapan
+    - tahapan konvolusi
+    - langkah langkah konvolusi apa aja ya?
+    - masih belum mengerti langkah konvolusi
+    - cara melakukan konvolusi seperti apa?
+    - cara konvolusi?
+    - cara
+    - cara kerja
+    - jelaskan cara melakukan konvolusi bagaimana cara melakukan konvolusi
+    - boleh tolong jelaskan cara melakukan konvolusi ga?
+    - jelaskan cara kerja melakukan konvolusi bagaimana cara melakukan konvolusi
+    - cara kerja konvolusi?
+    - boleh tolong jelaskan cara kerja melakukan konvolusi ga?
+
+- intent: hasil_konvolusi
+  examples: |
+    - Hasil dari konvolusi itu seperti apa ya?
+    - Hasilnya
+    - Hasil konvolusi
+    - Hasil citra setelah dilakukan konvolusi bagaimana?
+    - Boleh minta contoh hasilnya?
+    - Hasilnya kaya gimana?
+    - Seperti apa hasil konvolusi?
+    - Hasil
+
+- intent: fungsi_konvolusi
+  examples: |
+    - Fungsi dari konvolusi itu apa ya?
+    - Fungsi_konvolusi
+    - Fungsi konvolusi
+    - apa fungsi dari konvolusi?
+    - konvolusi untuk apa fungsinya?
+
+- intent: rumus_konvolusi
+  examples: |
+    - Rumus
+    - Formula
+    - Persamaan
+    - Rumus konvolusi
+    - Formula konvolusi
+    - Persamaan konvolusi
+
+- intent: ocr
+  examples: |
+    - Apa itu ocr
+    - Apa itu optical character recognition
+    - ocr
+    - optical character recognition
+    - Penjelasan dari optical character recognition itu apa?
+    - Penjelasan dari ocr?
+    - Jelasin dong ocr itu apa ya?
+    - Kalau ocr itu apa?
+    - Boleh tolong jelasin tentang ocr?
+    - jadi apa itu ocr?
+    - ocr itu apa ya?
+    - apa itu ocr?
+    - pengertian ocr
+    - oh kalau ocr itu apa ya?
+    - jadi apa itu ocr
+    - Jelasin dong optical character recognition itu apa ya?
+    - Kalau optical character recognition itu apa?
+    - Boleh tolong jelasin tentang optical character recognition?
+    - jadi apa itu optical character recognition?
+    - optical character recognition itu apa ya?
+    - apa itu optical character recognition?
+    - pengertian optical character recognition
+    - oh kalau optical character recognition itu apa ya?
+    - jadi apa itu optical character recognition
+
+- intent: pembentukan_citra
+  examples: |
+    - Apa itu pembentukan citra
+    - pembentukan citra
+    - Penjelasan dari pembentukan citra itu apa?
+    - Jelasin dong pembentukan citra itu apa ya?
+    - Kalau pembentukan citra itu apa?
+    - Boleh tolong jelasin tentang pembentukan citra?
+    - jadi apa itu pembentukan citra?
+    - pembentukan citra itu apa ya?
+    - apa itu pembentukan citra?
+    - pengertian pembentukan citra
+    - oh kalau pembentukan citra itu apa ya?
+    - jadi apa itu pembentukan citra
+
+- intent: citra_diskrit
+  examples: |
+    - Apa itu citra diskrit
+    - citra diskrit
+    - Penjelasan dari citra diskrit itu apa?
+    - Jelasin dong citra diskrit itu apa ya?
+    - Kalau citra diskrit itu apa?
+    - Boleh tolong jelasin tentang citra diskrit?
+    - jadi apa itu citra diskrit?
+    - citra diskrit itu apa ya?
+    - apa itu citra diskrit?
+    - pengertian citra diskrit
+    - oh kalau citra diskrit itu apa ya?
+    - jadi apa itu citra diskrit
+
+- intent: citra_kontinu
+  examples: |
+    - Apa itu citra kontinu
+    - citra kontinu
+    - Penjelasan dari citra kontinu itu apa?
+    - Jelasin dong citra kontinu itu apa ya?
+    - Kalau citra kontinu itu apa?
+    - Boleh tolong jelasin tentang citra kontinu?
+    - jadi apa itu citra kontinu?
+    - citra kontinu itu apa ya?
+    - apa itu citra kontinu?
+    - pengertian citra kontinu
+    - oh kalau citra kontinu itu apa ya?
+    - jadi apa itu citra kontinu
+
+- intent: data_digital
+  examples: |
+    - Apa itu data digital
+    - data digital
+    - Penjelasan dari data digital itu apa?
+    - Jelasin dong data digital itu apa ya?
+    - Kalau data digital itu apa?
+    - Boleh tolong jelasin tentang data digital?
+    - jadi apa itu data digital?
+    - data digital itu apa ya?
+    - apa itu data digital?
+    - pengertian data digital
+    - oh kalau data digital itu apa ya?
+    - jadi apa itu data digital
+
+- intent: data_analog
+  examples: |
+    - Apa itu data analog
+    - data analog
+    - Penjelasan dari data analog itu apa?
+    - Jelasin dong data analog itu apa ya?
+    - Kalau data analog itu apa?
+    - Boleh tolong jelasin tentang data analog?
+    - jadi apa itu data analog?
+    - data analog itu apa ya?
+    - apa itu data analog?
+    - pengertian data analog
+    - oh kalau data analog itu apa ya?
+    - jadi apa itu data analog
+
+- intent: digitalisasi_citra
+  examples: |
+    - Apa itu digitalisasi citra
+    - digitalisasi citra
+    - Penjelasan dari digitalisasi citra itu apa?
+    - Jelasin dong digitalisasi citra itu apa ya?
+    - Kalau digitalisasi citra itu apa?
+    - Boleh tolong jelasin tentang digitalisasi citra?
+    - jadi apa itu digitalisasi citra?
+    - digitalisasi citra itu apa ya?
+    - apa itu digitalisasi citra?
+    - pengertian digitalisasi citra
+    - oh kalau digitalisasi citra itu apa ya?
+    - jadi apa itu digitalisasi citra
+
+- intent: sampling
+  examples: |
+    - Apa itu sampling
+    - Apa itu digitalisasi spasial
+    - sampling
+    - digitalisasi spasial
+    - Penjelasan dari digitalisasi spasial itu apa?
+    - Penjelasan dari sampling?
+    - Jelasin dong sampling itu apa ya?
+    - Kalau sampling itu apa?
+    - Boleh tolong jelasin tentang sampling?
+    - jadi apa itu sampling?
+    - sampling itu apa ya?
+    - apa itu sampling?
+    - pengertian sampling
+    - oh kalau sampling itu apa ya?
+    - jadi apa itu sampling
+    - Jelasin dong digitalisasi spasial itu apa ya?
+    - Kalau digitalisasi spasial itu apa?
+    - Boleh tolong jelasin tentang digitalisasi spasial?
+    - jadi apa itu digitalisasi spasial?
+    - digitalisasi spasial itu apa ya?
+    - apa itu digitalisasi spasial?
+    - pengertian digitalisasi spasial
+    - oh kalau digitalisasi spasial itu apa ya?
+    - jadi apa itu digitalisasi spasial
+
+- intent: kuantisasi
+  examples: |
+    - Apa itu kuantisasi
+    - Apa itu digitalisasi intensitas
+    - kuantisasi
+    - digitalisasi intensitas
+    - Penjelasan dari digitalisasi intensitas itu apa?
+    - Penjelasan dari kuantisasi?
+    - Jelasin dong kuantisasi itu apa ya?
+    - Kalau kuantisasi itu apa?
+    - Boleh tolong jelasin tentang kuantisasi?
+    - jadi apa itu kuantisasi?
+    - kuantisasi itu apa ya?
+    - apa itu kuantisasi?
+    - pengertian kuantisasi
+    - oh kalau kuantisasi itu apa ya?
+    - jadi apa itu kuantisasi
+    - Jelasin dong digitalisasi intensitas itu apa ya?
+    - Kalau digitalisasi intensitas itu apa?
+    - Boleh tolong jelasin tentang digitalisasi intensitas?
+    - jadi apa itu digitalisasi intensitas?
+    - digitalisasi intensitas itu apa ya?
+    - apa itu digitalisasi intensitas?
+    - pengertian digitalisasi intensitas
+    - oh kalau digitalisasi intensitas itu apa ya?
+    - jadi apa itu digitalisasi intensitas
+
+- intent: resolusi
+  examples: |
+    - Apa itu resolusi
+    - resolusi
+    - Penjelasan dari resolusi itu apa?
+    - Jelasin dong resolusi itu apa ya?
+    - Kalau resolusi itu apa?
+    - Boleh tolong jelasin tentang resolusi?
+    - jadi apa itu resolusi?
+    - resolusi itu apa ya?
+    - apa itu resolusi?
+    - pengertian resolusi
+    - oh kalau resolusi itu apa ya?
+    - jadi apa itu resolusi
+
+- intent: representasi
+  examples: |
+    - Apa itu representasi citra digital
+    - representasi citra digital
+    - Penjelasan dari representasi citra digital itu apa?
+    - Jelasin dong representasi citra digital itu apa ya?
+    - Kalau representasi citra digital itu apa?
+    - Boleh tolong jelasin tentang representasi citra digital?
+    - jadi apa itu representasi citra digital?
+    - representasi citra digital itu apa ya?
+    - apa itu representasi citra digital?
+    - pengertian representasi citra digital
+    - oh kalau representasi citra digital itu apa ya?
+    - jadi apa itu representasi citra digital
+
+- intent: bitmap
+  examples: |
+    - Apa itu bitmap
+    - bitmap
+    - Penjelasan dari bitmap itu apa?
+    - Jelasin dong bitmap itu apa ya?
+    - Kalau bitmap itu apa?
+    - Boleh tolong jelasin tentang bitmap?
+    - jadi apa itu bitmap?
+    - bitmap itu apa ya?
+    - apa itu bitmap?
+    - pengertian bitmap
+    - oh kalau bitmap itu apa ya?
+    - jadi apa itu bitmap
+
+- intent: grafik
+  examples: |
+    - Apa itu grafik
+    - grafik
+    - Penjelasan dari grafik itu apa?
+    - Jelasin dong grafik itu apa ya?
+    - Kalau grafik itu apa?
+    - Boleh tolong jelasin tentang grafik?
+    - jadi apa itu grafik?
+    - grafik itu apa ya?
+    - apa itu grafik?
+    - pengertian grafik
+    - oh kalau grafik itu apa ya?
+    - jadi apa itu grafik
+
+- intent: level_titik
+  examples: |
+    - Apa itu level titik
+    - level titik
+    - Penjelasan dari level titik itu apa?
+    - Jelasin dong level titik itu apa ya?
+    - Kalau level titik itu apa?
+    - Boleh tolong jelasin tentang level titik?
+    - jadi apa itu level titik?
+    - level titik itu apa ya?
+    - apa itu level titik?
+    - pengertian level titik
+    - oh kalau level titik itu apa ya?
+    - jadi apa itu level titik
+
+- intent: grayscaling
+  examples: |
+    - Apa itu grayscaling
+    - grayscaling
+    - Penjelasan dari grayscaling itu apa?
+    - Jelasin dong grayscaling itu apa ya?
+    - Kalau grayscaling itu apa?
+    - Boleh tolong jelasin tentang grayscaling?
+    - jadi apa itu grayscaling?
+    - grayscaling itu apa ya?
+    - apa itu grayscaling?
+    - pengertian grayscaling
+    - oh kalau grayscaling itu apa ya?
+    - jadi apa itu grayscaling
+
+- intent: thresholding
+  examples: |
+    - Apa itu thresholding
+    - thresholding
+    - Penjelasan dari thresholding itu apa?
+    - Jelasin dong thresholding itu apa ya?
+    - Kalau thresholding itu apa?
+    - Boleh tolong jelasin tentang thresholding?
+    - jadi apa itu thresholding?
+    - thresholding itu apa ya?
+    - apa itu thresholding?
+    - pengertian thresholding
+    - oh kalau thresholding itu apa ya?
+    - jadi apa itu thresholding
+
+- intent: negatif
+  examples: |
+    - Apa itu operasi negatif
+    - operasi negatif
+    - Penjelasan dari operasi negatif itu apa?
+    - Jelasin dong operasi negatif itu apa ya?
+    - Kalau operasi negatif itu apa?
+    - Boleh tolong jelasin tentang operasi negatif?
+    - jadi apa itu operasi negatif?
+    - operasi negatif itu apa ya?
+    - apa itu operasi negatif?
+    - pengertian operasi negatif
+    - oh kalau operasi negatif itu apa ya?
+    - jadi apa itu operasi negatif
+
+- intent: clip
+  examples: |
+    - Apa itu clipping
+    - clipping
+    - Penjelasan dari clipping itu apa?
+    - Jelasin dong clipping itu apa ya?
+    - Kalau clipping itu apa?
+    - Boleh tolong jelasin tentang clipping?
+    - jadi apa itu clipping?
+    - clipping itu apa ya?
+    - apa itu clipping?
+    - pengertian clipping
+    - oh kalau clipping itu apa ya?
+    - jadi apa itu clipping
+
+- intent: brightening
+  examples: |
+    - Apa itu brightening
+    - brightening
+    - Penjelasan dari brightening itu apa?
+    - Jelasin dong brightening itu apa ya?
+    - Kalau brightening itu apa?
+    - Boleh tolong jelasin tentang brightening?
+    - jadi apa itu brightening?
+    - brightening itu apa ya?
+    - apa itu brightening?
+    - pengertian brightening
+    - oh kalau brightening itu apa ya?
+    - jadi apa itu brightening
+    - Apa itu pencerahan citra
+    - pencerahan citra
+    - Penjelasan dari pencerahan citra itu apa?
+    - Jelasin dong pencerahan citra itu apa ya?
+    - Kalau pencerahan citra itu apa?
+    - Boleh tolong jelasin tentang pencerahan citra?
+    - jadi apa itu pencerahan citra?
+    - pencerahan citra itu apa ya?
+    - apa itu pencerahan citra?
+    - pengertian pencerahan citra
+    - oh kalau pencerahan citra itu apa ya?
+    - jadi apa itu pencerahan citra
+
+- intent: kontras
+  examples: |
+    - Apa itu kontras
+    - kontras
+    - Penjelasan dari kontras itu apa?
+    - Jelasin dong kontras itu apa ya?
+    - Kalau kontras itu apa?
+    - Boleh tolong jelasin tentang kontras?
+    - jadi apa itu kontras?
+    - kontras itu apa ya?
+    - apa itu kontras?
+    - pengertian kontras
+    - oh kalau kontras itu apa ya?
+    - jadi apa itu kontras
+    - Apa itu contrast
+    - contrast
+    - Penjelasan dari contrast itu apa?
+    - Jelasin dong contrast itu apa ya?
+    - Kalau contrast itu apa?
+    - Boleh tolong jelasin tentang contrast?
+    - jadi apa itu contrast?
+    - contrast itu apa ya?
+    - apa itu contrast?
+    - pengertian contrast
+    - oh kalau contrast itu apa ya?
+    - jadi apa itu contrast
+
+- intent: peregangan
+  examples: |
+    - Apa itu peregangan kontras
+    - peregangan kontras
+    - Penjelasan dari peregangan kontras itu apa?
+    - Jelasin dong peregangan kontras itu apa ya?
+    - Kalau peregangan kontras itu apa?
+    - Boleh tolong jelasin tentang peregangan kontras?
+    - jadi apa itu peregangan kontras?
+    - peregangan kontras itu apa ya?
+    - apa itu peregangan kontras?
+    - pengertian peregangan kontras
+    - oh kalau peregangan kontras itu apa ya?
+    - jadi apa itu peregangan kontras
+    - Apa itu contrast stretching
+    - contrast stretching 
+    - Penjelasan dari contrast stretching itu apa?
+    - Jelasin dong contrast stretching itu apa ya?
+    - Kalau contrast stretching itu apa?
+    - Boleh tolong jelasin tentang contrast stretching?
+    - jadi apa itu contrast stretching?
+    - contrast stretching itu apa ya?
+    - apa itu contrast stretching?
+    - pengertian contrast stretching
+    - oh kalau contraststretching itu apa ya?
+    - jadi apa itu contrast stretching
+
+- intent: translasi
+  examples: |
+    - Apa itu translasi
+    - translasi
+    - Penjelasan dari translasi itu apa?
+    - Jelasin dong translasi itu apa ya?
+    - Kalau translasi itu apa?
+    - Boleh tolong jelasin tentang translasi?
+    - jadi apa itu translasi?
+    - translasi itu apa ya?
+    - apa itu translasi?
+    - pengertian translasi
+    - oh kalau translasi itu apa ya?
+    - jadi apa itu translasi
+
+- intent: rotasi
+  examples: |
+    - Apa itu rotasi
+    - rotasi
+    - Penjelasan dari rotasi itu apa?
+    - Jelasin dong rotasi itu apa ya?
+    - Kalau rotasi itu apa?
+    - Boleh tolong jelasin tentang rotasi?
+    - jadi apa itu rotasi?
+    - rotasi itu apa ya?
+    - apa itu rotasi?
+    - pengertian rotasi
+    - oh kalau rotasi itu apa ya?
+    - jadi apa itu rotasi
+
+- intent: scaling
+  examples: |
+    - Apa itu scaling
+    - scaling
+    - skala
+    - Penjelasan dari scaling itu apa?
+    - Jelasin dong scaling itu apa ya?
+    - Kalau scaling itu apa?
+    - Boleh tolong jelasin tentang scaling?
+    - jadi apa itu scaling?
+    - scaling itu apa ya?
+    - apa itu scaling?
+    - pengertian scaling
+    - oh kalau scaling itu apa ya?
+    - jadi apa itu scaling
+    - Apa itu resize
+    - resize
+    - Penjelasan dari resize itu apa?
+    - Jelasin dong resize itu apa ya?
+    - Kalau resize itu apa?
+    - Boleh tolong jelasin tentang resize?
+    - jadi apa itu resize?
+    - resize itu apa ya?
+    - apa itu resize?
+    - pengertian resize
+    - oh kalau resize itu apa ya?
+    - jadi apa itu resize
+
+- intent: flip
+  examples: |
+    - Apa itu flipping citra
+    - flipping citra
+    - flipping
+    - flip
+    - Penjelasan dari flipping citra itu apa?
+    - Jelasin dong flipping citra itu apa ya?
+    - Kalau flipping citra itu apa?
+    - Boleh tolong jelasin tentang flipping citra?
+    - jadi apa itu flipping citra?
+    - flipping citra itu apa ya?
+    - apa itu flipping citra?
+    - pengertian flipping citra
+    - oh kalau flipping citra itu apa ya?
+    - jadi apa itu flipping citra
+
+- intent: lokal
+  examples: |
+    - Apa itu level lokal
+    - level lokal
+    - Penjelasan dari level lokal itu apa?
+    - Jelasin dong level lokal itu apa ya?
+    - Kalau level lokal itu apa?
+    - Boleh tolong jelasin tentang level lokal?
+    - jadi apa itu level lokal?
+    - level lokal itu apa ya?
+    - apa itu level lokal?
+    - pengertian level lokal
+    - oh kalau level lokal itu apa ya?
+    - jadi apa itu level lokal
+
+- intent: global
+  examples: |
+    - Apa itu level global
+    - level global
+    - Penjelasan dari level global itu apa?
+    - Jelasin dong level global itu apa ya?
+    - Kalau level global itu apa?
+    - Boleh tolong jelasin tentang level global?
+    - jadi apa itu level global?
+    - level global itu apa ya?
+    - apa itu level global?
+    - pengertian level global
+    - oh kalau level global itu apa ya?
+    - jadi apa itu level global
+
+- intent: aritmatika
+  examples: |
+    - Apa itu aritmatika citra
+    - aritmatika citra
+    - Penjelasan dari aritmatika citra itu apa?
+    - Jelasin dong aritmatika citra itu apa ya?
+    - Kalau aritmatika citra itu apa?
+    - Boleh tolong jelasin tentang aritmatika citra?
+    - jadi apa itu aritmatika citra?
+    - aritmatika citra itu apa ya?
+    - apa itu aritmatika citra?
+    - pengertian aritmatika citra
+    - oh kalau aritmatika citra itu apa ya?
+    - jadi apa itu aritmatika citra
+
+- intent: penjumlahan
+  examples: |
+    - Apa itu penjumlahan citra
+    - penjumlahan citra
+    - penjumlahan
+    - tambah
+    - Penjelasan dari penjumlahan citra itu apa?
+    - Jelasin dong penjumlahan citra itu apa ya?
+    - Kalau penjumlahan citra itu apa?
+    - Boleh tolong jelasin tentang penjumlahan citra?
+    - jadi apa itu penjumlahan citra?
+    - penjumlahan citra itu apa ya?
+    - apa itu penjumlahan citra?
+    - pengertian penjumlahan citra
+    - oh kalau penjumlahan citra itu apa ya?
+    - jadi apa itu penjumlahan citra
+
+- intent: pengurangan
+  examples: |
+    - Apa itu pengurangan citra
+    - pengurangan citra
+    - kurang
+    - pengurangan
+    - Penjelasan dari pengurangan citra itu apa?
+    - Jelasin dong pengurangan citra itu apa ya?
+    - Kalau pengurangan citra itu apa?
+    - Boleh tolong jelasin tentang pengurangan citra?
+    - jadi apa itu pengurangan citra?
+    - pengurangan citra itu apa ya?
+    - apa itu pengurangan citra?
+    - pengertian pengurangan citra
+    - oh kalau pengurangan citra itu apa ya?
+    - jadi apa itu pengurangan citra
+
+- intent: perkalian
+  examples: |
+    - Apa itu perkalian citra
+    - kali
+    - perkalian
+    - perkalian citra
+    - Penjelasan dari perkalian citra itu apa?
+    - Jelasin dong perkalian citra itu apa ya?
+    - Kalau perkalian citra itu apa?
+    - Boleh tolong jelasin tentang perkalian citra?
+    - jadi apa itu perkalian citra?
+    - perkalian citra itu apa ya?
+    - apa itu perkalian citra?
+    - pengertian perkalian citra
+    - oh kalau perkalian citra itu apa ya?
+    - jadi apa itu perkalian citra
+
+- intent: pembagian
+  examples: |
+    - Apa itu pembagian citra
+    - bagi
+    - pembagian
+    - pembagian citra
+    - Penjelasan dari pembagian citra itu apa?
+    - Jelasin dong pembagian citra itu apa ya?
+    - Kalau pembagian citra itu apa?
+    - Boleh tolong jelasin tentang pembagian citra?
+    - jadi apa itu pembagian citra?
+    - pembagian citra itu apa ya?
+    - apa itu pembagian citra?
+    - pengertian pembagian citra
+    - oh kalau pembagian citra itu apa ya?
+    - jadi apa itu pembagian citra
+
+- intent: boolean
+  examples: |
+    - Apa itu boolean
+    - boolean
+    - Penjelasan dari boolean itu apa?
+    - Jelasin dong boolean itu apa ya?
+    - Kalau boolean itu apa?
+    - Boleh tolong jelasin tentang boolean?
+    - jadi apa itu boolean?
+    - boolean itu apa ya?
+    - apa itu boolean?
+    - pengertian boolean
+    - oh kalau boolean itu apa ya?
+    - jadi apa itu boolean
+
+- intent: histogram
+  examples: |
+    - Apa itu histogram
+    - histogram
+    - Penjelasan dari histogram itu apa?
+    - Jelasin dong histogram itu apa ya?
+    - Kalau histogram itu apa?
+    - Boleh tolong jelasin tentang histogram?
+    - jadi apa itu histogram?
+    - histogram itu apa ya?
+    - apa itu histogram?
+    - pengertian histogram
+    - oh kalau histogram itu apa ya?
+    - jadi apa itu histogram
+
+- intent: buat_histogram
+  examples: |
+    - bagaimana cara membuat histogram
+    - membuat histogram
+    - buat histogram
+    - rumus histogram
+    - Penjelasan dari pembuatan histogram itu apa?
+    - Jelasin dong cara membuat histogram itu apa ya?
+    - Kalau pembuatan histogram itu apa?
+    - Boleh tolong jelasin tentang cara membuat histogram?
+
+- intent: perataan_histogram
+  examples: |
+    - Apa itu perataan histogram
+    - perataan histogram
+    - Penjelasan dari perataan histogram itu apa?
+    - Jelasin dong perataan histogram itu apa ya?
+    - Kalau perataan histogram itu apa?
+    - Boleh tolong jelasin tentang perataan histogram?
+    - jadi apa itu perataan histogram?
+    - perataan histogram itu apa ya?
+    - apa itu perataan histogram?
+    - pengertian perataan histogram
+    - oh kalau perataan histogram itu apa ya?
+    - jadi apa itu perataan histogram
+
+- intent: spek_histogram
+  examples: |
+    - Apa itu spesifikasi histogram
+    - spesifikasi histogram
+    - Penjelasan dari spesifikasi histogram itu apa?
+    - Jelasin dong spesifikasi histogram itu apa ya?
+    - Kalau spesifikasi histogram itu apa?
+    - Boleh tolong jelasin tentang spesifikasi histogram?
+    - jadi apa itu spesifikasi histogram?
+    - spesifikasi histogram itu apa ya?
+    - apa itu spesifikasi histogram?
+    - pengertian spesifikasi histogram
+    - oh kalau spesifikasi histogram itu apa ya?
+    - jadi apa itu spesifikasi histogram
+
+- intent: fourrier
+  examples: |
+    - Apa itu transformasi fourrier
+    - transformasi fourrier
+    - fourrier
+    - Penjelasan dari transformasi fourrier itu apa?
+    - Jelasin dong transformasi fourrier itu apa ya?
+    - Kalau transformasi fourrier itu apa?
+    - Boleh tolong jelasin tentang transformasi fourrier?
+    - jadi apa itu transformasi fourrier?
+    - transformasi fourrier itu apa ya?
+    - apa itu transformasi fourrier?
+    - pengertian transformasi fourrier
+    - oh kalau transformasi fourrier itu apa ya?
+    - jadi apa itu transformasi fourrier
+
+- intent: fourrier_diskrit
+  examples: |
+    - Apa itu transformasi fourrier diskrit
+    - transformasi fourrier diskrit
+    - fourrier diskrit
+    - tfd
+    - Penjelasan dari transformasi fourrier diskrit itu apa?
+    - Jelasin dong transformasi fourrier diskrit itu apa ya?
+    - Kalau transformasi fourrier diskrit itu apa?
+    - Boleh tolong jelasin tentang transformasi fourrier diskrit?
+    - jadi apa itu transformasi fourrier diskrit?
+    - transformasi fourrier diskrit itu apa ya?
+    - apa itu transformasi fourrier diskrit?
+    - pengertian transformasi fourrier diskrit
+    - oh kalau transformasi fourrier diskrit itu apa ya?
+    - jadi apa itu transformasi fourrier diskrit
+
+- intent: walsh
+  examples: |
+    - Apa itu transformasi walsh
+    - transformasi walsh
+    - walsh
+    - Penjelasan dari transformasi walsh itu apa?
+    - Jelasin dong transformasi walsh itu apa ya?
+    - Kalau transformasi walsh itu apa?
+    - Boleh tolong jelasin tentang transformasi walsh?
+    - jadi apa itu transformasi walsh?
+    - transformasi walsh itu apa ya?
+    - apa itu transformasi walsh?
+    - pengertian transformasi walsh
+    - oh kalau transformasi walsh itu apa ya?
+    - jadi apa itu transformasi walsh
+
+- intent: hadamard
+  examples: |
+    - Apa itu transformasi hadamard
+    - transformasi hadamard
+    - hadamard
+    - Penjelasan dari transformasi hadamard itu apa?
+    - Jelasin dong transformasi hadamard itu apa ya?
+    - Kalau transformasi hadamard itu apa?
+    - Boleh tolong jelasin tentang transformasi hadamard?
+    - jadi apa itu transformasi hadamard?
+    - transformasi hadamard itu apa ya?
+    - apa itu transformasi hadamard?
+    - pengertian transformasi hadamard
+    - oh kalau transformasi hadamard itu apa ya?
+    - jadi apa itu transformasi hadamard
+
+- intent: wavelet
+  examples: |
+    - Apa itu transformasi wavelet
+    - transformasi wavelet
+    - wavelet
+    - Penjelasan dari transformasi wavelet itu apa?
+    - Jelasin dong transformasi wavelet itu apa ya?
+    - Kalau transformasi wavelet itu apa?
+    - Boleh tolong jelasin tentang transformasi wavelet?
+    - jadi apa itu transformasi wavelet?
+    - transformasi wavelet itu apa ya?
+    - apa itu transformasi wavelet?
+    - pengertian transformasi wavelet
+    - oh kalau transformasi wavelet itu apa ya?
+    - jadi apa itu transformasi wavelet
+
+- intent: wavelet_diskrit
+  examples: |
+    - Apa itu transformasi wavelet diskrit
+    - transformasi wavelet diskrit
+    - wavelet diskrit
+    - Penjelasan dari transformasi wavelet diskrit itu apa?
+    - Jelasin dong transformasi wavelet diskrit itu apa ya?
+    - Kalau transformasi wavelet diskrit itu apa?
+    - Boleh tolong jelasin tentang transformasi wavelet diskrit?
+    - jadi apa itu transformasi wavelet diskrit?
+    - transformasi wavelet diskrit itu apa ya?
+    - apa itu transformasi wavelet diskrit?
+    - pengertian transformasi wavelet diskrit
+    - oh kalau transformasi wavelet diskrit itu apa ya?
+    - jadi apa itu transformasi wavelet diskrit
+
+- intent: morfologi
+  examples: |
+    - Apa itu morfologi citra
+    - morfologi citra
+    - morfologi
+    - Penjelasan dari morfologi citra itu apa?
+    - Jelasin dong morfologi citra itu apa ya?
+    - Kalau morfologi citra itu apa?
+    - Boleh tolong jelasin tentang morfologi citra?
+    - jadi apa itu morfologi citra?
+    - morfologi citra itu apa ya?
+    - apa itu morfologi citra?
+    - pengertian morfologi citra
+    - oh kalau morfologi citra itu apa ya?
+    - jadi apa itu morfologi citra
+
+- intent: dilasi
+  examples: |
+    - Apa itu dilasi citra
+    - dilasi citra
+    - dilasi
+    - Penjelasan dari dilasi citra itu apa?
+    - Jelasin dong dilasi citra itu apa ya?
+    - Kalau dilasi citra itu apa?
+    - Boleh tolong jelasin tentang dilasi citra?
+    - jadi apa itu dilasi citra?
+    - dilasi citra itu apa ya?
+    - apa itu dilasi citra?
+    - pengertian dilasi citra
+    - oh kalau dilasi citra itu apa ya?
+    - jadi apa itu dilasi citra
+
+- intent: erosi
+  examples: |
+    - Apa itu erosi citra
+    - erosi citra
+    - erosi
+    - Penjelasan dari erosi citra itu apa?
+    - Jelasin dong erosi citra itu apa ya?
+    - Kalau erosi citra itu apa?
+    - Boleh tolong jelasin tentang erosi citra?
+    - jadi apa itu erosi citra?
+    - erosi citra itu apa ya?
+    - apa itu erosi citra?
+    - pengertian erosi citra
+    - oh kalau erosi citra itu apa ya?
+    - jadi apa itu erosi citra
+
+- intent: opening
+  examples: |
+    - Apa itu opening citra
+    - opening citra
+    - opening
+    - Penjelasan dari opening citra itu apa?
+    - Jelasin dong opening citra itu apa ya?
+    - Kalau opening citra itu apa?
+    - Boleh tolong jelasin tentang opening citra?
+    - jadi apa itu opening citra?
+    - opening citra itu apa ya?
+    - apa itu opening citra?
+    - pengertian opening citra
+    - oh kalau opening citra itu apa ya?
+    - jadi apa itu opening citra
+
+- intent: closing
+  examples: |
+    - Apa itu closing citra
+    - closing citra
+    - closing
+    - Penjelasan dari closing citra itu apa?
+    - Jelasin dong closing citra itu apa ya?
+    - Kalau closing citra itu apa?
+    - Boleh tolong jelasin tentang closing citra?
+    - jadi apa itu closing citra?
+    - closing citra itu apa ya?
+    - apa itu closing citra?
+    - pengertian closing citra
+    - oh kalau closing citra itu apa ya?
+    - jadi apa itu closing citra
+
+- intent: se
+  examples: |
+    - Apa itu Structuring Elements
+    - Structuring Elements
+    - structuring elements
+    - se
+    - SE
+    - Penjelasan dari Structuring Elements itu apa?
+    - Jelasin dong Structuring Elements itu apa ya?
+    - Kalau Structuring Elements itu apa?
+    - Boleh tolong jelasin tentang Structuring Elements?
+    - jadi apa itu Structuring Elements?
+    - Structuring Elements itu apa ya?
+    - apa itu Structuring Elements?
+    - pengertian Structuring Elements
+    - oh kalau Structuring Elements itu apa ya?
+    - jadi apa itu Structuring Elements
+
+- intent: hitmiss
+  examples: |
+    - Apa itu hit or miss transform
+    - hit or miss transform
+    - hit or miss transform
+    - Penjelasan dari hit or miss transform itu apa?
+    - Jelasin dong hit or miss transform itu apa ya?
+    - Kalau hit or miss transform itu apa?
+    - Boleh tolong jelasin tentang hit or miss transform?
+    - jadi apa itu hit or miss transform?
+    - hit or miss transform itu apa ya?
+    - apa itu hit or miss transform?
+    - pengertian hit or miss transform
+    - oh kalau hit or miss transform itu apa ya?
+    - jadi apa itu hit or miss transform
+
+- intent: dilasi_gray
+  examples: |
+    - Apa itu dilasi grayscale
+    - dilasi grayscale
+    - dilasi pada grayscale
+    - Penjelasan dari dilasi grayscale itu apa?
+    - Jelasin dong dilasi grayscale itu apa ya?
+    - Kalau dilasi grayscale itu apa?
+    - Boleh tolong jelasin tentang dilasi grayscale?
+    - jadi apa itu dilasi grayscale?
+    - dilasi grayscale itu apa ya?
+    - apa itu dilasi grayscale?
+    - pengertian dilasi grayscale
+    - oh kalau dilasi grayscale itu apa ya?
+    - jadi apa itu dilasi grayscale
+
+- intent: erosi_gray
+  examples: |
+    - Apa itu erosi grayscale
+    - erosi grayscale
+    - erosi pada grayscale
+    - Penjelasan dari erosi grayscale itu apa?
+    - Jelasin dong erosi grayscale itu apa ya?
+    - Kalau erosi grayscale itu apa?
+    - Boleh tolong jelasin tentang erosi grayscale?
+    - jadi apa itu erosi grayscale?
+    - erosi grayscale itu apa ya?
+    - apa itu erosi grayscale?
+    - pengertian erosi grayscale
+    - oh kalau erosi grayscale itu apa ya?
+    - jadi apa itu erosi grayscale
+
+- intent: kontur
+  examples: |
+    - Apa itu kontur
+    - kontur
+    - contour
+    - Penjelasan dari kontur itu apa?
+    - Jelasin dong kontur itu apa ya?
+    - Kalau kontur itu apa?
+    - Boleh tolong jelasin tentang kontur?
+    - jadi apa itu kontur?
+    - kontur itu apa ya?
+    - apa itu kontur?
+    - pengertian kontur
+    - oh kalau kontur itu apa ya?
+    - jadi apa itu kontur
+
+- intent: boundary
+  examples: |
+    - Apa itu ekstraksi boundary
+    - ekstraksi boundary
+    - Penjelasan dari ekstraksi boundary itu apa?
+    - Jelasin dong ekstraksi boundary itu apa ya?
+    - Kalau ekstraksi boundary itu apa?
+    - Boleh tolong jelasin tentang ekstraksi boundary?
+    - jadi apa itu ekstraksi boundary?ekstraksi boundary
+    - ekstraksi boundary itu apa ya?
+    - apa itu ekstraksi boundary?
+    - pengertian ekstraksi boundary
+    - oh kalau ekstraksi boundary itu apa ya?
+    - jadi apa itu ekstraksi boundary
+
+- intent: region
+  examples: |
+    - Apa itu region filling
+    - region filling
+    - Penjelasan dari region filling itu apa?
+    - Jelasin dong region filling itu apa ya?
+    - Kalau region filling itu apa?
+    - Boleh tolong jelasin tentang region filling?
+    - jadi apa itu region filling?
+    - region filling itu apa ya?
+    - apa itu region filling?
+    - pengertian region filling
+    - oh kalau region filling itu apa ya?
+    - jadi apa itu region filling
+
+- intent: connected
+  examples: |
+    - Apa itu ekstraksi connected component
+    - ekstraksi connected component
+    - Penjelasan dari ekstraksi connected component itu apa?
+    - Jelasin dong ekstraksi connected component itu apa ya?
+    - Kalau ekstraksi connected component itu apa?
+    - Boleh tolong jelasin tentang ekstraksi connected component?
+    - jadi apa itu ekstraksi connected component?
+    - ekstraksi connected component itu apa ya?
+    - apa itu ekstraksi connected component?
+    - pengertian ekstraksi connected component
+    - oh kalau ekstraksi connected component itu apa ya?
+    - jadi apa itu ekstraksi connected component
+
+- intent: thinning
+  examples: |
+    - Apa itu thinning
+    - thinning
+    - Penjelasan dari thinning itu apa?
+    - Jelasin dong thinning itu apa ya?
+    - Kalau thinning itu apa?
+    - Boleh tolong jelasin tentang thinning?
+    - jadi apa itu thinning?
+    - thinning itu apa ya?
+    - apa itu thinning?
+    - pengertian thinning
+    - oh kalau thinning itu apa ya?
+    - jadi apa itu thinning
+
+- intent: thickening
+  examples: |
+    - Apa itu thickening
+    - thickening
+    - Penjelasan dari thickening itu apa?
+    - Jelasin dong thickening itu apa ya?
+    - Kalau thickening itu apa?
+    - Boleh tolong jelasin tentang thickening?
+    - jadi apa itu thickening?
+    - thickening itu apa ya?
+    - apa itu thickening?
+    - pengertian thickening
+    - oh kalau thickening itu apa ya?
+    - jadi apa itu thickening
+
+- intent: skeleton
+  examples: |
+    - Apa itu skeletonization
+    - skeletonization
+    - Penjelasan dari skeletonization itu apa?
+    - Jelasin dong skeletonization itu apa ya?
+    - Kalau skeletonization itu apa?
+    - Boleh tolong jelasin tentang skeletonization?
+    - jadi apa itu skeletonization?
+    - skeletonization itu apa ya?
+    - apa itu skeletonization?
+    - pengertian skeletonization
+    - oh kalau skeletonization itu apa ya?
+    - jadi apa itu skeletonization
+
+- intent: pruning
+  examples: |
+    - Apa itu pruning
+    - pruning
+    - Penjelasan dari pruning itu apa?
+    - Jelasin dong pruning itu apa ya?
+    - Kalau pruning itu apa?
+    - Boleh tolong jelasin tentang pruning?
+    - jadi apa itu pruning?
+    - pruning itu apa ya?
+    - apa itu pruning?
+    - pengertian pruning
+    - oh kalau pruning itu apa ya?
+    - jadi apa itu pruning
+
+- intent: step_canny
+  examples: |
+    - boleh tolong jelaskan langkah langkah canny edge detection ga?
+    - tahapan canny edge detection
+    - tahapan canny edge detection
+    - langkah langkah canny edge detection apa aja ya?
+    - masih belum mengerti langkah canny edge detection
+    - cara melakukan canny edge detection seperti apa?
+    - cara canny edge detection?
+    - jelaskan cara melakukan canny edge detection
+    - boleh tolong jelaskan cara melakukan canny edge detection ga?
+    - jelaskan cara kerja melakukan canny edge detection
+    - cara kerja canny edge detection?
+    - boleh tolong jelaskan cara kerja melakukan canny edge detection ga?
+
+- intent: reduksi_noise
+  examples: |
+    - Apa itu reduksi noise
+    - reduksi noise
+    - Penjelasan dari reduksi noise itu apa?
+    - Jelasin dong reduksi noise itu apa ya?
+    - Kalau reduksi noise itu apa?
+    - Boleh tolong jelasin tentang reduksi noise?
+    - jadi apa itu reduksi noise?
+    - reduksi noise itu apa ya?
+    - apa itu reduksi noise?
+    - pengertian reduksi noise
+    - oh kalau reduksi noise itu apa ya?
+    - jadi apa itu reduksi noise
+
+- intent: finding_gradient
+  examples: |
+    - Apa itu finding gradient
+    - finding gradient
+    - Penjelasan dari finding gradient itu apa?
+    - Jelasin dong finding gradient itu apa ya?
+    - Kalau finding gradient itu apa?
+    - Boleh tolong jelasin tentang finding gradient?
+    - jadi apa itu finding gradient?
+    - finding gradient itu apa ya?
+    - apa itu finding gradient?
+    - pengertian finding gradient
+    - oh kalau finding gradient itu apa ya?
+    - jadi apa itu finding gradient
+
+- intent: suppression
+  examples: |
+    - Apa itu non maximum suppression
+    - non maximum suppression
+    - Penjelasan dari non maximum suppression itu apa?
+    - Jelasin dong non maximum suppression itu apa ya?
+    - Kalau non maximum suppression itu apa?
+    - Boleh tolong jelasin tentang non maximum suppression?
+    - jadi apa itu non maximum suppression?
+    - non maximum suppression itu apa ya?
+    - apa itu non maximum suppression?
+    - pengertian non maximum suppression
+    - oh kalau non maximum suppression itu apa ya?
+    - jadi apa itu non maximum suppression
+
+- intent: hysterisis_tresh
+  examples: |
+    - Apa itu hysterisis thresholding
+    - hysterisis thresholding
+    - Penjelasan dari hysterisis thresholding itu apa?
+    - Jelasin dong hysterisis thresholding itu apa ya?
+    - Kalau hysterisis thresholding itu apa?
+    - Boleh tolong jelasin tentang hysterisis thresholding?
+    - jadi apa itu hysterisis thresholding?
+    - hysterisis thresholding itu apa ya?
+    - apa itu hysterisis thresholding?
+    - pengertian hysterisis thresholding
+    - oh kalau hysterisis thresholding itu apa ya?
+    - jadi apa itu hysterisis thresholding
+
+- intent: chain
+  examples: |
+    - Apa itu chain code
+    - chain code
+    - kode rantai
+    - Penjelasan dari chain code itu apa?
+    - Jelasin dong chain code itu apa ya?
+    - Kalau chain code itu apa?
+    - Boleh tolong jelasin tentang chain code?
+    - jadi apa itu chain code?
+    - chain code itu apa ya?
+    - apa itu chain code?
+    - pengertian chain code
+    - oh kalau chain code itu apa ya?
+    - jadi apa itu chain code
+
+- intent: perimeter
+  examples: |
+    - Apa itu perimeter objek
+    - perimeter objek
+    - Penjelasan dari perimeter objek itu apa?
+    - Jelasin dong perimeter objek itu apa ya?
+    - Kalau perimeter objek itu apa?
+    - Boleh tolong jelasin tentang perimeter objek?
+    - jadi apa itu perimeter objek?
+    - perimeter objek itu apa ya?
+    - apa itu perimeter objek?
+    - pengertian perimeter objek
+    - oh kalau perimeter objek itu apa ya?
+    - jadi apa itu perimeter objek
+
+- intent: area
+  examples: |
+    - Apa itu area
+    - area
+    - Penjelasan dari area itu apa?
+    - Jelasin dong area itu apa ya?
+    - Kalau area itu apa?
+    - Boleh tolong jelasin tentang area?
+    - jadi apa itu area?
+    - area itu apa ya?
+    - apa itu area?
+    - pengertian area
+    - oh kalau area itu apa ya?
+    - jadi apa itu area
+
+- intent: faktor_bentuk
+  examples: |
+    - Apa itu faktor bentuk
+    - faktor bentuk
+    - Penjelasan dari faktor bentuk itu apa?
+    - Jelasin dong faktor bentuk itu apa ya?
+    - Kalau faktor bentuk itu apa?
+    - Boleh tolong jelasin tentang faktor bentuk?
+    - jadi apa itu faktor bentuk?
+    - faktor bentuk itu apa ya?
+    - apa itu faktor bentuk
+    - pengertian faktor bentuk
+    - oh kalau faktor bentuk itu apa ya?
+    - jadi apa itu faktor bentuk
+
+- intent: template
+  examples: |
+    - Apa itu template matching
+    - template matching
+    - Penjelasan dari template matching itu apa?
+    - Jelasin dong template matching itu apa ya?
+    - Kalau template matching itu apa?
+    - Boleh tolong jelasin tentang template matching?
+    - jadi apa itu template matching?
+    - template matching itu apa ya?
+    - apa itu template matching?
+    - pengertian template matching
+    - oh kalau template matching itu apa ya?
+    - jadi apa itu template matching
+
+- intent: mean_template
+  examples: |
+    - boleh tolong jelaskan cara mencari mean pada template matching ga?
+    - cara mencari mean pada template matching
+    - cara mencari mean pada template matching bagaimana ya?
+    - masih belum mengerti cara mencari mean pada template matching
+    - cara mencari mean pada template matching seperti apa?
+    - cara mencari mean pada template matching?
+    - jelaskan cara mencari mean pada template matching
+    - boleh tolong jelaskan cara mencari mean pada template matching ga?
+    - jelaskan cara mencari mean pada template matching
+    - boleh tolong jelaskan cara mencari mean pada template matching ga?
+
+- intent: std_template
+  examples: |
+    - boleh tolong jelaskan cara mengithung standar deviasi pada template matching ga?
+    - cara mengithung standar deviasi pada template matching
+    - cara mengithung standar deviasin pada template matching bagaimana ya?
+    - masih belum mengerti cara mengithung standar deviasi pada template matching
+    - cara mengithung standar deviasi pada template matching seperti apa?
+    - cara mengithung standar deviasi pada template matching?
+    - jelaskan cara mengithung standar deviasi pada template matching
+    - boleh tolong jelaskan cara mengithung standar deviasi pada template matching ga?
+    - jelaskan cara mengithung standar deviasi pada template matching
+    - boleh tolong jelaskan cara mengithung standar deviasi pada template matching ga?
+
+- intent: normalisasi_template
+  examples: |
+    - boleh tolong jelaskan cara normalisasi citra pada template matching ga?
+    - cara normalisasi citra pada template matching
+    - cara normalisasi citra pada template matching bagaimana ya?
+    - masih belum mengerti cara normalisasi citra pada template matching
+    - cara normalisasi citran pada template matching seperti apa?
+    - cara normalisasi citra pada template matching?
+    - jelaskan cara normalisasi citra pada template matching
+    - boleh tolong jelaskan cara normalisasi citra pada template matching ga?
+    - jelaskan cara normalisasi citra pada template matching
+    - boleh tolong jelaskan cara normalisasi citra pada template matching ga?
+
+- intent: cross_template
+  examples: |
+    - boleh tolong jelaskan cara Normalized Cross Correlation pada template matching ga?
+    - cara Normalized Cross Correlation pada template matching
+    - cara Normalized Cross Correlation pada template matching bagaimana ya?
+    - masih belum mengerti cara Normalized Cross Correlation pada template matching
+    - cara Normalized Cross Correlation pada template matching seperti apa?
+    - cara Normalized Cross Correlation pada template matching?
+    - jelaskan cara Normalized Cross Correlation pada template matching
+    - boleh tolong jelaskan cara Normalized Cross Correlation pada template matching ga?
+    - jelaskan cara Normalized Cross Correlation pada template matching
+    - boleh tolong jelaskan cara Normalized Cross Correlation pada template matching ga?
+
+- intent: hough
+  examples: |
+    - Apa itu hough transform
+    - hough transform
+    - transformasi hough
+    - Penjelasan dari hough transform itu apa?
+    - Jelasin dong hough transform itu apa ya?
+    - Kalau hough transform itu apa?
+    - Boleh tolong jelasin tentang hough transform?
+    - jadi apa itu hough transform?
+    - hough transform itu apa ya?
+    - apa itu hough transform?
+    - pengertian hough transform
+    - oh kalau hough transform itu apa ya?
+    - jadi apa itu hough transform
+
+- intent: chough
+  examples: |
+    - Apa itu circular hough transform
+    - circular hough transform
+    - Penjelasan dari circular hough transform itu apa?
+    - Jelasin dong circular hough transform itu apa ya?
+    - Kalau circular hough transform itu apa?
+    - Boleh tolong jelasin tentang circular hough transform?
+    - jadi apa itu circular hough transform?
+    - circular hough transform itu apa ya?
+    - apa itu circular hough transform?
+    - pengertian circular hough transform
+    - oh kalau circular hough transform itu apa ya?
+    - jadi apa itu circular hough transform
+
+- intent: smoothing
+  examples: |
+    - Apa itu smoothing
+    - smoothing
+    - pelembutan citra
+    - Penjelasan dari smoothing itu apa?
+    - Jelasin dong smoothing itu apa ya?
+    - Kalau smoothing itu apa?
+    - Boleh tolong jelasin tentang smoothing?
+    - jadi apa itu smoothing?
+    - smoothing itu apa ya?
+    - apa itu smoothing?
+    - pengertian smoothing
+    - oh kalau smoothing itu apa ya?
+    - jadi apa itu smoothing
+
+- intent: mean
+  examples: |
+    - Apa itu mean filter
+    - mean filter
+    - Penjelasan dari mean filter itu apa?
+    - Jelasin dong mean filter itu apa ya?
+    - Kalau mean filter itu apa?
+    - Boleh tolong jelasin tentang mean filter?
+    - jadi apa itu mean filter?
+    - mean filter itu apa ya?
+    - apa itu mean filter?
+    - pengertian mean filter
+    - oh kalau mean filter itu apa ya?
+    - jadi apa itu mean filter
+
+- intent: median
+  examples: |
+    - Apa itu median filter
+    - median filter
+    - Penjelasan dari median filter itu apa?
+    - Jelasin dong median filter itu apa ya?
+    - Kalau median filter itu apa?
+    - Boleh tolong jelasin tentang median filter?
+    - jadi apa itu median filter?
+    - median filter itu apa ya?
+    - apa itu median filter?
+    - pengertian median filter
+    - oh kalau median filter itu apa ya?
+    - jadi apa itu median filter
+
+- intent: gaus
+  examples: |
+    - Apa itu gaussian filter
+    - gaus
+    - gaussian
+    - gaussian filter
+    - Penjelasan dari gaussian filter itu apa?
+    - Jelasin dong gaussian filter itu apa ya?
+    - Kalau gaussian filter itu apa?
+    - Boleh tolong jelasin tentang gaussian filter?
+    - jadi apa itu gaussian filter?
+    - gaussian filter itu apa ya?
+    - apa itu gaussian filter?
+    - pengertian gaussian filter
+    - oh kalau gaussian filter itu apa ya?
+    - jadi apa itu gaussian filter
+
+- intent: low_pass
+  examples: |
+    - Apa itu low pass filter
+    - low pass filter
+    - Penjelasan dari low pass filter itu apa?
+    - Jelasin dong low pass filter itu apa ya?
+    - Kalau low pass filter itu apa?
+    - Boleh tolong jelasin tentang low pass filter?
+    - jadi apa itu low pass filter?
+    - low pass filter itu apa ya?
+    - apa itu low pass filter?
+    - pengertian low pass filter
+    - oh kalau low pass filter itu apa ya?
+    - jadi apa itu low pass filter
+
+- intent: high_pass
+  examples: |
+    - Apa itu high pass filter
+    - high pass filter
+    - Penjelasan dari high pass filter itu apa?
+    - Jelasin dong high pass filter itu apa ya?
+    - Kalau high pass filter itu apa?
+    - Boleh tolong jelasin tentang high pass filter?
+    - jadi apa itu high pass filter?
+    - high pass filter itu apa ya?
+    - apa itu high pass filter?
+    - pengertian high pass filter
+    - oh kalau high pass filter itu apa ya?
+    - jadi apa itu high pass filter
+
+- intent: sharpening
+  examples: |
+    - Apa itu sharpening
+    - sharpening
+    - penajaman citra
+    - Penjelasan dari sharpening itu apa?
+    - Jelasin dong sharpening itu apa ya?
+    - Kalau sharpening itu apa?
+    - Boleh tolong jelasin tentang sharpening?
+    - jadi apa itu sharpening?
+    - sharpening itu apa ya?
+    - apa itu sharpening?
+    - pengertian sharpening
+    - oh kalau sharpening itu apa ya?
+    - jadi apa itu sharpening
+
+- intent: single_thresh
+  examples: |
+    - Apa itu single global thresholding
+    - single global thresholding
+    - Penjelasan dari single global thresholding itu apa?
+    - Jelasin dong single global thresholding itu apa ya?
+    - Kalau single global thresholding itu apa?
+    - Boleh tolong jelasin tentang single global thresholding?
+    - jadi apa itu single global thresholding?
+    - single global thresholding itu apa ya?
+    - apa itu single global thresholding?
+    - pengertian single global thresholding
+    - oh kalau single global thresholding itu apa ya?
+    - jadi apa itu single global thresholding
+
+- intent: otsu_thresh
+  examples: |
+    - Apa itu otsu thresholding
+    - otsu thresholding
+    - Penjelasan dari otsu thresholding itu apa?
+    - Jelasin dong otsu thresholding itu apa ya?
+    - Kalau otsu thresholding itu apa?
+    - Boleh tolong jelasin tentang otsu thresholding?
+    - jadi apa itu otsu thresholding?
+    - otsu thresholding itu apa ya?
+    - apa itu otsu thresholding?
+    - pengertian otsu thresholding
+    - oh kalau otsu thresholding itu apa ya?
+    - jadi apa itu otsu thresholding
+
+- intent: multi_thresh
+  examples: |
+    - Apa itu multi level thresholding
+    - multi level thresholding
+    - Penjelasan dari multi level thresholding itu apa?
+    - Jelasin dong multi level thresholding itu apa ya?
+    - Kalau multi level thresholding itu apa?
+    - Boleh tolong jelasin tentang multi level thresholding?
+    - jadi apa itu multi level thresholding?
+    - multi level thresholding itu apa ya?
+    - apa itu multi level thresholding?
+    - pengertian multi level thresholding
+    - oh kalau multi level thresholding itu apa ya?
+    - jadi apa itu multi level thresholding
+
+- intent: pengambangan
+  examples: |
+    - Apa itu pengambangan lokal
+    - pengambangan lokal
+    - pengambangan
+    - Penjelasan dari pengambangan lokal itu apa?
+    - Jelasin dong pengambangan lokal itu apa ya?
+    - Kalau pengambangan lokal itu apa?
+    - Boleh tolong jelasin tentang pengambangan lokal?
+    - jadi apa itu pengambangan lokal?
+    - pengambangan lokal itu apa ya?
+    - apa itu pengambangan lokal?
+    - pengertian pengambangan lokal
+    - oh kalau pengambangan lokal itu apa ya?
+    - jadi apa itu pengambangan lokal
+
+- intent: hog
+  examples: |
+    - Apa itu hog
+    - hog
+    - histogram of gradient
+    - Penjelasan dari hog itu apa?
+    - Jelasin dong hog itu apa ya?
+    - Kalau hog itu apa?
+    - Boleh tolong jelasin tentang hog?
+    - jadi apa itu hog?
+    - hog itu apa ya?
+    - apa itu hog?
+    - pengertian hog
+    - oh kalau hog itu apa ya?
+    - jadi apa itu hog
+
+- intent: deteksi_tepi
+  examples: |
+    - Apa itu deteksi tepi
+    - deteksi tepi
+    - Penjelasan dari deteksi tepi itu apa?
+    - Jelasin dong deteksi tepi itu apa ya?
+    - Kalau deteksi tepi itu apa?
+    - Boleh tolong jelasin tentang deteksi tepi?
+    - jadi apa itu deteksi tepi?
+    - deteksi tepi itu apa ya?
+    - apa itu deteksi tepi?
+    - pengertian deteksi tepi
+    - oh kalau deteksi tepi itu apa ya?
+    - jadi apa itu deteksi tepi
+
+- intent: tepi
+  examples: |
+    - Apa itu tepi
+    - tepi
+    - Penjelasan dari tepi itu apa?
+    - Jelasin dong tepi itu apa ya?
+    - Kalau tepi itu apa?
+    - Boleh tolong jelasin tentang tepi?
+    - jadi apa itu tepi?
+    - tepi itu apa ya?
+    - apa itu tepi?
+    - pengertian tepi
+    - oh kalau tepi itu apa ya?
+    - jadi apa itu tepi
+
+- intent: diff_grad
+  examples: |
+    - Apa itu differential gradient
+    - differential gradient
+    - operator gradien pertama
+    - Penjelasan dari differential gradient itu apa?
+    - Jelasin dong differential gradient itu apa ya?
+    - Kalau differential gradient itu apa?
+    - Boleh tolong jelasin tentang differential gradient?
+    - jadi apa itu differential gradient?
+    - differential gradient itu apa ya?
+    - apa itu differential gradient?
+    - pengertian differential gradient
+    - oh kalau differential gradient itu apa ya?
+    - jadi apa itu differential gradient
+
+- intent: diff_center
+  examples: |
+    - Apa itu center difference
+    - center difference
+    - terpusat
+    - operator gradient selisih terpusat
+    - operator gradient terpusat
+    - Penjelasan dari center difference itu apa?
+    - Jelasin dong center difference itu apa ya?
+    - Kalau center difference itu apa?
+    - Boleh tolong jelasin tentang center difference?
+    - jadi apa itu center difference?
+    - center difference itu apa ya?
+    - apa itu center difference?
+    - pengertian center difference
+    - oh kalau center difference itu apa ya?
+    - jadi apa itu center difference
+
+- intent: sobel
+  examples: |
+    - Apa itu operator sobel
+    - operator sobel
+    - Penjelasan dari operator sobel itu apa?
+    - Jelasin dong operator sobel itu apa ya?
+    - Kalau operator sobel itu apa?
+    - Boleh tolong jelasin tentang operator sobel?
+    - jadi apa itu operator sobel?
+    - operator sobel itu apa ya?
+    - apa itu operator sobel?
+    - pengertian operator sobel
+    - oh kalau operator sobel itu apa ya?
+    - jadi apa itu operator sobel
+
+- intent: prewitt
+  examples: |
+    - Apa itu operator prewitt
+    - operator prewitt
+    - Penjelasan dari operator prewitt itu apa?
+    - Jelasin dong operator prewitt itu apa ya?
+    - Kalau operator prewitt itu apa?
+    - Boleh tolong jelasin tentang operator prewitt?
+    - jadi apa itu operator prewitt?
+    - operator prewitt itu apa ya?
+    - apa itu operator prewitt?
+    - pengertian operator prewitt
+    - oh kalau operator prewitt itu apa ya?
+    - jadi apa itu operator prewitt
+
+- intent: robert
+  examples: |
+    - Apa itu operator robert
+    - operator robert
+    - Penjelasan dari operator robert itu apa?
+    - Jelasin dong operator robert itu apa ya?
+    - Kalau operator robert itu apa?
+    - Boleh tolong jelasin tentang operator robert?
+    - jadi apa itu operator robert?
+    - operator robert itu apa ya?
+    - apa itu operator robert?
+    - pengertian operator robert
+    - oh kalau operator robert itu apa ya?
+    - jadi apa itu operator robert
+
+- intent: laplacian
+  examples: |
+    - Apa itu operator laplacian
+    - operator laplacian
+    - operator turunan kedua
+    - Penjelasan dari operator laplacian itu apa?
+    - Jelasin dong operator laplacian itu apa ya?
+    - Kalau operator laplacian itu apa?
+    - Boleh tolong jelasin tentang operator laplacian?
+    - jadi apa itu operator laplacian?
+    - operator laplacian itu apa ya?
+    - apa itu operator laplacian?
+    - pengertian operator laplacian
+    - oh kalau operator laplacian itu apa ya?
+    - jadi apa itu operator laplacian
+
+- intent: log
+  examples: |
+    - Apa itu operator laplacian of gaussian
+    - operator laplacian of gaussian
+    - Penjelasan dari operator laplacian of gaussian itu apa?
+    - Jelasin dong operator laplacian of gaussian itu apa ya?
+    - Kalau operator laplacian of gaussian itu apa?
+    - Boleh tolong jelasin tentang operator laplacian of gaussian?
+    - jadi apa itu operator laplacian of gaussian?
+    - operator laplacian of gaussian itu apa ya?
+    - apa itu operator laplacian of gaussian?
+    - pengertian operator laplacian of gaussian
+    - oh kalau operator laplacian of gaussian itu apa ya?
+    - jadi apa itu operator laplacian of gaussian
+
+- intent: kompas
+  examples: |
+    - Apa itu operator kompas
+    - operator kompas
+    - Penjelasan dari operator kompas itu apa?
+    - Jelasin dong operator kompas itu apa ya?
+    - Kalau operator kompas itu apa?
+    - Boleh tolong jelasin tentang operator kompas?
+    - jadi apa itu operator kompas?
+    - operator kompas itu apa ya?
+    - apa itu operator kompas?
+    - pengertian operator kompas
+    - oh kalau operator kompas itu apa ya?
+    - jadi apa itu operator kompas
+
+- intent: dasar_warna
+  examples: |
+    - Apa itu dasar warna
+    - dasar warna
+    - Penjelasan dari dasar warna itu apa?
+    - Jelasin dong dasar warna itu apa ya?
+    - Kalau dasar warna itu apa?
+    - Boleh tolong jelasin tentang dasar warna?
+    - jadi apa itu dasar warna?
+    - dasar warna itu apa ya?
+    - apa itu dasar warna?
+    - pengertian dasar warna
+    - oh kalau dasar warna itu apa ya?
+    - jadi apa itu dasar warna
+
+- intent: atribut_warna
+  examples: |
+    - Apa itu atribut warna
+    - atribut warna
+    - Penjelasan dari atribut warna itu apa?
+    - Jelasin dong atribut warna itu apa ya?
+    - Kalau atribut warna itu apa?
+    - Boleh tolong jelasin tentang atribut warna?
+    - jadi apa itu atribut warna?
+    - atribut warna itu apa ya?
+    - apa itu atribut warna?
+    - pengertian atribut warna
+    - oh kalau atribut warna itu apa ya?
+    - jadi apa itu atribut warna
+
+- intent: rgb
+  examples: |
+    - Apa itu model warna rgb
+    - rgb
+    - model warna rgb
+    - Penjelasan dari model warna rgb itu apa?
+    - Jelasin dong model warna rgb itu apa ya?
+    - Kalau model warna rgb itu apa?
+    - Boleh tolong jelasin tentang model warna rgb?
+    - jadi apa itu model warna rgb?
+    - model warna rgb itu apa ya?
+    - apa itu model warna rgb?
+    - pengertian model warna rgb
+    - oh kalau model warna rgb itu apa ya?
+    - jadi apa itu model warna rgb
+
+- intent: cmy
+  examples: |
+    - Apa itu model warna cmy
+    - cmy
+    - model warna cmy
+    - Penjelasan dari model warna cmy itu apa?
+    - Jelasin dong model warna cmy itu apa ya?
+    - Kalau model warna cmy itu apa?
+    - Boleh tolong jelasin tentang model warna cmy?
+    - jadi apa itu model warna cmy?
+    - model warna cmy itu apa ya?
+    - apa itu model warna cmy?
+    - pengertian model warna cmy
+    - oh kalau model warna cmy itu apa ya?
+    - jadi apa itu model warna cmy
+
+- intent: hs
+  examples: |
+    - Apa itu model warna cmy
+    - cmy
+    - hsv
+    - hsi
+    - hsl
+    - model warna hs
+    - Penjelasan dari model warna hs itu apa?
+    - Jelasin dong model warna hs itu apa ya?
+    - Kalau model warna hs itu apa?
+    - Boleh tolong jelasin tentang model warna hs?
+    - jadi apa itu model warna hs?
+    - model warna hs itu apa ya?
+    - apa itu model warna hs?
+    - pengertian model warna hs
+    - oh kalau model warna hs itu apa ya?
+    - jadi apa itu model warna hs
+
+- intent: yuv
+  examples: |
+    - Apa itu model warna yuv
+    - yuv
+    - model warna yuv
+    - Penjelasan dari model warna yuv itu apa?
+    - Jelasin dong model warna yuv itu apa ya?
+    - Kalau model warna yuv itu apa?
+    - Boleh tolong jelasin tentang model warna yuv?
+    - jadi apa itu model warna yuv?
+    - model warna yuv itu apa ya?
+    - apa itu model warna yuv?
+    - pengertian model warna yuv
+    - oh kalau model warna yuv itu apa ya?
+    - jadi apa itu model warna yuv
+
+- intent: ycbcr
+  examples: |
+    - Apa itu model warna ycbcr
+    - ycbcr
+    - model warna ycbcr
+    - Penjelasan dari model warna ycbcr itu apa?
+    - Jelasin dong model warna ycbcr itu apa ya?
+    - Kalau model warna ycbcr itu apa?
+    - Boleh tolong jelasin tentang model warna ycbcr?
+    - jadi apa itu model warna ycbcr?
+    - model warna ycbcr itu apa ya?
+    - apa itu model warna ycbcr?
+    - pengertian model warna ycbcr
+    - oh kalau model warna ycbcr itu apa ya?
+    - jadi apa itu model warna ycbcr
+
+- intent: full_color
+  examples: |
+    - Apa itu full color image processing
+    - full color image processing
+    - full color
+    - Penjelasan dari full color image processing itu apa?
+    - Jelasin dong full color image processing itu apa ya?
+    - Kalau full color image processing itu apa?
+    - Boleh tolong jelasin tentang full color image processing?
+    - jadi apa itu full color image processing?
+    - full color image processing itu apa ya?
+    - apa itu full color image processing?
+    - pengertian full color image processing
+    - oh kalau full color image processing itu apa ya?
+    - jadi apa itu full color image processing
+
+- intent: point
+  examples: |
+    - Apa itu color image point processing
+    - image point
+    - point
+    - color image point processing
+    - Penjelasan dari color image point processing itu apa?
+    - Jelasin dong color image point processing itu apa ya?
+    - Kalau color image point processing itu apa?
+    - Boleh tolong jelasin tentang color image point processing?
+    - jadi apa itu color image point processing?
+    - color image point processing itu apa ya?
+    - apa itu color image point processing?
+    - pengertian color image point processing
+    - oh kalau color image point processing itu apa ya?
+    - jadi apa itu color image point processing
+
+- intent: balancing
+  examples: |
+    - Apa itu color balancing
+    - color balancing
+    - Penjelasan dari color balancing itu apa?
+    - Jelasin dong color balancing itu apa ya?
+    - Kalau color balancing itu apa?
+    - Boleh tolong jelasin tentang color balancing?
+    - jadi apa itu color balancing?
+    - color balancing itu apa ya?
+    - apa itu color balancing?
+    - pengertian color balancing
+    - oh kalau color balancing itu apa ya?
+    - jadi apa itu color balancing
+
+- intent: color_smooth
+  examples: |
+    - Apa itu color image smoothing
+    - color image smoothing
+    - Penjelasan dari color image smoothing itu apa?
+    - Jelasin dong color image smoothing itu apa ya?
+    - Kalau color image smoothing itu apa?
+    - Boleh tolong jelasin tentang color image smoothing?
+    - jadi apa itu color image smoothing?
+    - color image smoothing itu apa ya?
+    - apa itu color image smoothing?
+    - pengertian color image smoothing
+    - oh kalau color image smoothing itu apa ya?
+    - jadi apa itu color image smoothing
+
+- intent: color_sharp
+  examples: |
+    - Apa itu color image sharpening
+    - color image sharpening
+    - Penjelasan dari color image sharpening itu apa?
+    - Jelasin dong color image sharpening itu apa ya?
+    - Kalau color image sharpening itu apa?
+    - Boleh tolong jelasin tentang color image sharpening?
+    - jadi apa itu color image sharpening?
+    - color image sharpening itu apa ya?
+    - apa itu color image sharpening?
+    - pengertian color image sharpening
+    - oh kalau color image sharpening itu apa ya?
+    - jadi apa itu color image sharpening

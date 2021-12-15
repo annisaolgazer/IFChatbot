@@ -1,0 +1,91 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: konvo ver 1
+  steps:
+  - user: |
+      halo
+    intent: greet
+  - action: utter_greet
+  - user: |
+      aku mau tanya mengenai pcd nih
+    intent: image_processing
+  - action: utter_pcd
+  - action: utter_tanya
+  - user: |
+      oh gitu ya! kalau konvolusi itu apa ya?
+    intent: konvolusi
+  - action: utter_konvolusi
+  - action: utter_tanya
+  - user: |
+      kalau rumus konvolusi seperti apa ya?
+    intent: rumus_konvolusi
+  - action: utter_rumus
+  - action: utter_tanya
+  - user: |
+      nah sekarang aku mau tanya tentang cara kerja dari konvolusi itu bagaimana langkah langkahnya ya?
+    intent: step_konvolusi
+  - action: utter_step
+  - action: utter_tanya
+  - user: |
+      ada contoh hasil konvolusi ga?
+    intent: hasil_konvolusi
+  - action: utter_hasil
+  - action: utter_tanya
+  - user: |
+      engga
+    intent: deny
+  - action: utter_did_that_help
+  - user: |
+      ya! sangat membantu!
+    intent: affirm
+  - action: utter_goodbye
+  - user: |
+      makasih
+    intent: thank
+  - action: utter_noworries
+
+- story: konvo ver 2
+  steps:
+  - user: |
+      hi!
+    intent: greet
+  - action: utter_greet
+  - user: |
+      boleh jelaisn aku tentang pengolahan citra digital gak?
+    intent: image_processing
+  - action: utter_pcd
+  - action: utter_tanya
+  - user: |
+      kalau konvolusi?
+    intent: konvolusi
+  - action: utter_konvolusi
+  - action: utter_tanya
+  - user: |
+      ada rumus konvolusi ga?
+    intent: rumus_konvolusi
+  - action: utter_rumus
+  - action: utter_tanya
+  - user: |
+      cara kerja dari konvolusi itu seperti apa ya?
+    intent: step_konvolusi
+  - action: utter_step
+  - action: utter_tanya
+  - user: |
+      punya contoh hasil konvolusi?
+    intent: hasil_konvolusi
+  - action: utter_hasil
+  - action: utter_tanya
+  - user: |
+      ga
+    intent: deny
+  - action: utter_did_that_help
+  - user: |
+      iya
+    intent: affirm
+  - action: utter_goodbye
+  - user: |
+      thankyou
+    intent: thank
+  - action: utter_noworries

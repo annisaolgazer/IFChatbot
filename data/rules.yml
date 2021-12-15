@@ -1,0 +1,904 @@
+version: "2.0"
+
+rules:
+
+- rule: Say hello anytime the user greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Selalu menjawab mengenai pengolahan citra
+  steps:
+  - intent: image_processing
+  - action: utter_pcd
+  - action: utter_pcd1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai piksel
+  steps:
+  - intent: piksel
+  - action: utter_piksel
+  - action: utter_piksel1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai filter
+  steps:
+  - intent: filter
+  - action: utter_filter
+  - action: utter_filter1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai kernel
+  steps:
+  - intent: kernel
+  - action: utter_kernel
+  - action: utter_kernel1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai citra
+  steps:
+  - intent: citra
+  - action: utter_citra
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai konvolusi
+  steps:
+  - intent: konvolusi
+  - action: utter_konvolusi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai fungsi konvolusi
+  steps:
+  - intent: fungsi_konvolusi
+  - action: utter_fungsi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai rumus konvolusi
+  steps:
+  - intent: rumus_konvolusi
+  - action: utter_rumus
+  - action: utter_rumus1
+  - action: utter_rumus2
+  - action: utter_rumus3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai step konvolusi
+  steps:
+  - intent: step_konvolusi
+  - action: utter_step
+  - action: utter_step1
+  - action: utter_step2
+  - action: utter_step3
+  - action: utter_step4
+  - action: utter_step5
+  - action: utter_step6
+  - action: utter_step7
+  - action: utter_step8
+  - action: utter_step9
+  - action: utter_step10
+  - action: utter_step11
+  - action: utter_step12
+  - action: utter_step13
+  - action: utter_step14
+  - action: utter_step15
+  - action: utter_step16
+  - action: utter_step17
+  - action: utter_step18
+  - action: utter_step19
+  - action: utter_step20
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai hasil konvolusi
+  steps:
+  - intent: hasil_konvolusi
+  - action: utter_hasil
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai border
+  steps:
+  - intent: border
+  - action: utter_border
+  - action: utter_border1
+  - action: utter_border2
+  - action: utter_border3
+  - action: utter_border4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai ocr
+  steps:
+  - intent: ocr
+  - action: utter_ocr
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai pembentukan citra
+  steps:
+  - intent: pembentukan_citra
+  - action: utter_pembentukan_citra
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai citra diskrit
+  steps:
+  - intent: citra_diskrit
+  - action: utter_citra_diskrit
+  - action: utter_citra_diskrit1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai citra kontinu
+  steps:
+  - intent: citra_kontinu
+  - action: utter_citra_kontinu
+  - action: utter_citra_kontinu1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai digital
+  steps:
+  - intent: data_digital
+  - action: utter_data_digital
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai analog
+  steps:
+  - intent: data_analog
+  - action: utter_data_analog
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai digitalisasi citra
+  steps:
+  - intent: digitalisasi_citra
+  - action: utter_digitalisasi_citra
+  - action: utter_digitalisasi_citra1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai sampling
+  steps:
+  - intent: sampling
+  - action: utter_sampling
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai kuantisasi
+  steps:
+  - intent: kuantisasi
+  - action: utter_kuantisasi
+  - action: utter_kuantisasi1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai resolusi
+  steps:
+  - intent: resolusi
+  - action: utter_resolusi
+  - action: utter_resolusi1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai representasi
+  steps:
+  - intent: representasi
+  - action: utter_representasi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai bitmap
+  steps:
+  - intent: bitmap
+  - action: utter_bitmap
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai grafik
+  steps:
+  - intent: grafik
+  - action: utter_grafik
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai level titik
+  steps:
+  - intent: level_titik
+  - action: utter_level_titik
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai grayscaling
+  steps:
+  - intent: grayscaling
+  - action: utter_grayscaling
+  - action: utter_grayscaling1
+  - action: utter_grayscaling2
+  - action: utter_grayscaling3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai thresholding
+  steps:
+  - intent: thresholding
+  - action: utter_thresholding
+  - action: utter_thresholding1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai negatif
+  steps:
+  - intent: negatif
+  - action: utter_negatif
+  - action: utter_negatif1
+  - action: utter_negatif2
+  - action: utter_negatif3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai clip
+  steps:
+  - intent: clip
+  - action: utter_clip
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai brightening
+  steps:
+  - intent: brightening
+  - action: utter_brightening
+  - action: utter_brightening1
+  - action: utter_brightening2
+  - action: utter_brightening3
+  - action: utter_brightening4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai kontras
+  steps:
+  - intent: kontras
+  - action: utter_kontras
+  - action: utter_kontras1
+  - action: utter_kontras2
+  - action: utter_kontras3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai peregangan
+  steps:
+  - intent: peregangan
+  - action: utter_peregangan
+  - action: utter_peregangan1
+  - action: utter_peregangan2
+  - action: utter_peregangan3
+  - action: utter_peregangan4
+  - action: utter_peregangan5
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai translasi
+  steps:
+  - intent: translasi
+  - action: utter_translasi
+  - action: utter_translasi1
+  - action: utter_translasi2
+  - action: utter_translasi3
+  - action: utter_translasi4
+  - action: utter_translasi5
+  - action: utter_translasi6
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai rotasi
+  steps:
+  - intent: rotasi
+  - action: utter_rotasi
+  - action: utter_rotasi1
+  - action: utter_rotasi2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai scaling
+  steps:
+  - intent: scaling
+  - action: utter_scaling
+  - action: utter_scaling1
+  - action: utter_scaling2
+  - action: utter_scaling3
+  - action: utter_scaling4
+  - action: utter_scaling5
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai flip
+  steps:
+  - intent: flip
+  - action: utter_flip
+  - action: utter_flip1
+  - action: utter_flip2
+  - action: utter_flip3
+  - action: utter_flip4
+  - action: utter_flip5
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai lokal
+  steps:
+  - intent: lokal
+  - action: utter_lokal
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai global
+  steps:
+  - intent: global
+  - action: utter_global
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai aritmatika
+  steps:
+  - intent: aritmatika
+  - action: utter_aritmatika
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai penjumlahan
+  steps:
+  - intent: penjumlahan
+  - action: utter_penjumlahan
+  - action: utter_penjumlahan1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai pengurangan
+  steps:
+  - intent: pengurangan
+  - action: utter_pengurangan
+  - action: utter_pengurangan1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai perkalian
+  steps:
+  - intent: perkalian
+  - action: utter_perkalian
+  - action: utter_perkalian1
+  - action: utter_perkalian2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai pembagian
+  steps:
+  - intent: pembagian
+  - action: utter_pembagian
+  - action: utter_pembagian1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai boolean
+  steps:
+  - intent: boolean
+  - action: utter_boolean
+  - action: utter_boolean1
+  - action: utter_boolean2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai histogram
+  steps:
+  - intent: histogram
+  - action: utter_histogtram
+  - action: utter_histogtram1
+  - action: utter_histogtram2
+  - action: utter_histogtram3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat histogram
+  steps:
+  - intent: buat_histogram
+  - action: utter_buat_histogram
+  - action: utter_buat_histogram1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai perataan histogram
+  steps:
+  - intent: perataan_histogram
+  - action: utter_perataan_histogram
+  - action: utter_perataan_histogram1
+  - action: utter_perataan_histogram2
+  - action: utter_perataan_histogram3
+  - action: utter_perataan_histogram4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai spek histogram
+  steps:
+  - intent: spek_histogram
+  - action: utter_spek_histogram
+  - action: utter_spek_histogram1
+  - action: utter_spek_histogram2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat fourrier
+  steps:
+  - intent: fourrier
+  - action: utter_fourrier
+  - action: utter_fourrier1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat fourrier diskrit
+  steps:
+  - intent: fourrier_diskrit
+  - action: utter_fourrier_diskrit
+  - action: utter_fourrier_diskrit1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat walsh
+  steps:
+  - intent: walsh
+  - action: utter_walsh
+  - action: utter_walsh1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai hadamard
+  steps:
+  - intent: hadamard
+  - action: utter_hadamard
+  - action: utter_hadamard1
+  - action: utter_hadamard2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai wavelet
+  steps:
+  - intent: wavelet
+  - action: utter_wavelet
+  - action: utter_wavelet1
+  - action: utter_wavelet2
+  - action: utter_wavelet3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat wavelet diskrit
+  steps:
+  - intent: wavelet_diskrit
+  - action: utter_wavelet_diskrit
+  - action: utter_wavelet_diskrit1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai morfologi
+  steps:
+  - intent: morfologi
+  - action: utter_morfologi
+  - action: utter_morfologi1
+  - action: utter_morfologi2
+  - action: utter_morfologi3
+  - action: utter_morfologi4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai se
+  steps:
+  - intent: se
+  - action: utter_se
+  - action: utter_se1
+  - action: utter_se2
+  - action: utter_se3
+  - action: utter_se4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai dilasi
+  steps:
+  - intent: dilasi
+  - action: utter_dilasi
+  - action: utter_dilasi1
+  - action: utter_dilasi2
+  - action: utter_dilasi3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai erosi
+  steps:
+  - intent: erosi
+  - action: utter_erosi
+  - action: utter_erosi1
+  - action: utter_erosi2
+  - action: utter_erosi3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai opening
+  steps:
+  - intent: opening
+  - action: utter_opening
+  - action: utter_opening1
+  - action: utter_opening2
+  - action: utter_opening3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai closing
+  steps:
+  - intent: closing
+  - action: utter_closing
+  - action: utter_closing1
+  - action: utter_closing2
+  - action: utter_closing3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai hitmiss
+  steps:
+  - intent: hitmiss
+  - action: utter_hitmiss
+  - action: utter_hitmiss1
+  - action: utter_hitmiss2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai dilasi gray
+  steps:
+  - intent: dilasi_gray
+  - action: utter_dilasi_gray
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai erosi gray
+  steps:
+  - intent: erosi_gray
+  - action: utter_erosi_gray
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai kontur
+  steps:
+  - intent: kontur
+  - action: utter_kontur
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat boundary
+  steps:
+  - intent: boundary
+  - action: utter_boundary
+  - action: utter_boundary1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai region
+  steps:
+  - intent: region
+  - action: utter_region
+  - action: utter_region1
+  - action: utter_region2
+  - action: utter_region3
+  - action: utter_region4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai connected
+  steps:
+  - intent: connected
+  - action: utter_connected
+  - action: utter_connected1
+  - action: utter_connected2
+  - action: utter_connected3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat thinning
+  steps:
+  - intent: thinning
+  - action: utter_thinning
+  - action: utter_thinning1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat thickening
+  steps:
+  - intent: thickening
+  - action: utter_thickening
+  - action: utter_thickening1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat skeleton
+  steps:
+  - intent: skeleton
+  - action: utter_skeleton
+  - action: utter_skeleton1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat pruning
+  steps:
+  - intent: pruning
+  - action: utter_pruning
+  - action: utter_pruning1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat step canny
+  steps:
+  - intent: step_canny
+  - action: utter_step_canny
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat reduksi noise
+  steps:
+  - intent: reduksi_noise
+  - action: utter_reduksi_noise
+  - action: utter_reduksi_noise1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat finding gradient
+  steps:
+  - intent: finding_gradient
+  - action: utter_finding_gradient
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai suppression
+  steps:
+  - intent: suppression
+  - action: utter_suppression
+  - action: utter_suppression1
+  - action: utter_suppression2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai hysterisis tresh
+  steps:
+  - intent: hysterisis_tresh
+  - action: utter_hysterisis_tresh
+  - action: utter_hysterisis_tresh1
+  - action: utter_hysterisis_tresh2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat chain
+  steps:
+  - intent: chain
+  - action: utter_chain
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat perimeter
+  steps:
+  - intent: perimeter
+  - action: utter_perimeter
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat area
+  steps:
+  - intent: area
+  - action: utter_area
+  - action: utter_area1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat faktor bentuk
+  steps:
+  - intent: faktor_bentuk
+  - action: utter_faktor_bentuk
+  - action: utter_faktor_bentuk1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat template
+  steps:
+  - intent: template
+  - action: utter_template
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat mean template
+  steps:
+  - intent: mean_template
+  - action: utter_mean_template
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat std template
+  steps:
+  - intent: std_template
+  - action: utter_std_template
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat normalisasi template
+  steps:
+  - intent: normalisasi_template
+  - action: utter_normalisasi_template
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat cross template
+  steps:
+  - intent: cross_template
+  - action: utter_cross_template
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat hough
+  steps:
+  - intent: hough
+  - action: utter_hough
+  - action: utter_hough1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat chough
+  steps:
+  - intent: chough
+  - action: utter_chough
+  - action: utter_chough1
+  - action: utter_chough2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat smoothing
+  steps:
+  - intent: smoothing
+  - action: utter_smoothing
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat mean
+  steps:
+  - intent: mean
+  - action: utter_mean
+  - action: utter_mean1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat median
+  steps:
+  - intent: median
+  - action: utter_median
+  - action: utter_median1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat gaus
+  steps:
+  - intent: gaus
+  - action: utter_gaus
+  - action: utter_gaus1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat low pass
+  steps:
+  - intent: low_pass
+  - action: utter_low_pass
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat high pass
+  steps:
+  - intent: high_pass
+  - action: utter_high_pass
+  - action: utter_high_pass1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat sharpening
+  steps:
+  - intent: sharpening
+  - action: utter_sharpening
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat single thresh
+  steps:
+  - intent: single_thresh
+  - action: utter_single_thresh
+  - action: utter_single_thresh1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat otsu thresh
+  steps:
+  - intent: otsu_thresh
+  - action: utter_otsu_thresh
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat multi thresh
+  steps:
+  - intent: multi_thresh
+  - action: utter_multi_thresh
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat pengambangan
+  steps:
+  - intent: pengambangan
+  - action: utter_pengambangan
+  - action: utter_pengambangan1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat hog
+  steps:
+  - intent: hog
+  - action: utter_hog
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat deteksi_tepi
+  steps:
+  - intent: deteksi_tepi
+  - action: utter_deteksi_tepi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat tepi
+  steps:
+  - intent: tepi
+  - action: utter_tepi
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai diff_grad
+  steps:
+  - intent: diff_grad
+  - action: utter_diff_grad
+  - action: utter_diff_grad1
+  - action: utter_diff_grad2
+  - action: utter_diff_grad3
+  - action: utter_diff_grad4
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat diff center
+  steps:
+  - intent: diff_center
+  - action: utter_diff_center
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat sobel
+  steps:
+  - intent: sobel
+  - action: utter_sobel
+  - action: utter_sobel1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat prewitt
+  steps:
+  - intent: prewitt
+  - action: utter_prewitt
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat robert
+  steps:
+  - intent: robert
+  - action: utter_robert
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat laplacian
+  steps:
+  - intent: laplacian
+  - action: utter_laplacian
+  - action: utter_laplacian1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat log
+  steps:
+  - intent: log
+  - action: utter_log
+  - action: utter_log1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat kompas
+  steps:
+  - intent: kompas
+  - action: utter_kompas
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat dasar warna
+  steps:
+  - intent: dasar_warna
+  - action: utter_dasar_warna
+  - action: utter_dasar_warna1
+  - action: utter_dasar_warna2
+  - action: utter_dasar_warna3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat atribut warna
+  steps:
+  - intent: atribut_warna
+  - action: utter_atribut_warna
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat rgb
+  steps:
+  - intent: rgb
+  - action: utter_rgb
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat cmy
+  steps:
+  - intent: cmy
+  - action: utter_cmy
+  - action: utter_cmy1
+  - action: utter_cmy2
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat hs
+  steps:
+  - intent: hs
+  - action: utter_hs
+  - action: utter_hs1
+  - action: utter_hs2
+  - action: utter_hs3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat yuv
+  steps:
+  - intent: yuv
+  - action: utter_yuv
+  - action: utter_yuv1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat ycbcr
+  steps:
+  - intent: ycbcr
+  - action: utter_ycbcr
+  - action: utter_ycbcr1
+  - action: utter_ycbcr2
+  - action: utter_ycbcr3
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat full color
+  steps:
+  - intent: full_color
+  - action: utter_full_color
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat point
+  steps:
+  - intent: point
+  - action: utter_point
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat balancing
+  steps:
+  - intent: balancing
+  - action: utter_balancing
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat color smooth
+  steps:
+  - intent: color_smooth
+  - action: utter_color_smooth
+  - action: utter_color_smooth1
+  - action: utter_tanya
+
+- rule: Selalu menjawab mengenai buat color sharp
+  steps:
+  - intent: color_sharp
+  - action: utter_color_sharp
+  - action: utter_color_sharp1
+  - action: utter_tanya
